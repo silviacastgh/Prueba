@@ -1,29 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tema CCS1</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="./img/favicon-32x32.png" type="image/x-icon"> <!--favicon-->
+  <link rel="stylesheet" href="./css/estilos.css"> <!--hoja de estilos-->
+
+
+  <!--tipografia-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+
+
+
+  <title>Inicio</title>
 </head>
 <body>
-    <header>
-         <h1>Clase CCS</h1>
-         <nav>
-            <a href="">Home</a>
-            <a href="">Registro</a>
-         </nav>
-         
-    </header>
-    <main>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quod optio reprehenderit nam libero nemo recusandae voluptates perspiciatis, dolore cum magnam impedit maxime explicabo. Suscipit, incidunt. Voluptate odio nihil delectus?</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi, voluptatibus. </p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla a eaque animi recusandae, odio veritatis in officia vero eligendi? Doloremque deserunt ratione, commodi qui obcaecati sed quae earum quasi voluptas?
-        Laboriosam iure at ut accusantium modi officia asperiores fugiat blanditiis. Iusto, maxime officiis quidem molestiae doloribus illo repellendus porro ipsa necessitatibus aliquid dolor fugit temporibus facilis eaque accusantium fugiat dolores!</p>
-   
-       <h1>Prueba clonar desde otra rama</h1>
-    </main>
-    <footer>
+    <section class="container">
+      <!--header-->
+      <header class="item header">
+        <!--titulo-->
+        <div class="header_titulo">
+          <img src="./img/icono.png" alt="proyecto_animales" title="proyecto_animales" class="header_icono">
+          <h1>PROYECTO ANIMALES</h1>
+          <img src="./img/icono.png" alt="proyecto_animales" title="proyecto_animales" class="header_icono">
+        </div>
+        <!--barra de navegación del header-->
+        <nav class="navegation">
+            <ul>
+                <li><a href="./index.html">INICIO</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropbtn">ADOPCIÓN</a>
+                  <div class="dropdown-content">
+                    <a href="#">CONOCELOS</a>
+                    <a href="#">REQUISITOS DE ADOPCIÓN</a>
+                  </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">DONAR</a>
+                    <div class="dropdown-content">
+                      <a href="#">DONACIONES ECONÓMICAS</a>
+                      <a href="#">DONACIONES DE INSUMOS</a>
+                    </div>
+                </li>
+                <li><a href="#">PET SHOP</a></li>
+                <li><a href="#">CONTACTO</a></li>
+                <li><a href="./login.html">INGRESAR</a></li>
+            </ul>     
+        </nav>
+      </header>
 
-    </footer>
+
+      <!--main-->
+      <main class="item contenido">
+        <!--seccion del banner-->
+        <section id="banner">
+          <h2>CONOCENOS</h2>
+        </section>
+
+        <!--seccion de historia-->
+        <section id="historia" class="contenedor">
+            <div class="contenedor_historia">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quos vitae tempore repudiandae sint assumenda commodi et! 
+                    Consectetur pariatur, eaque officiis praesentium vel quis minus culpa excepturi quo repudiandae vitae illum, labore sit 
+                    eos necessitatibus, iusto odio debitis tenetur! Corporis quidem ea nobis sint laborum cumque nesciunt expedita assumenda 
+                    ut. Adipisci beatae facilis, recusandae impedit dicta repellat expedita maiores aliquid, eveniet esse, perspiciatis con
+                    sectetur ad est. Saepe excepturi nobis sunt eum mollitia iste nisi aliquid incidunt similique quae quasi laudantium, solu
+                    ta nostrum quidem totam qui repellat nemo. Amet, odit! Fugit expedita praesentium, eum ratione ex sed ipsam repellat volu
+                    ptatibus et.
+                </p>
+            </div>
+            <div class="contenedor_historia">
+                <img src="./img/prueba_grupo.jpg" alt="equipo_5" title="equipo_5">
+            </div>
+        </section>
+
+        <!--integrantes del equipo-->
+        <section id="equipo">
+            <h2>INTEGRANTES</h2> 
+            <div class="contenedor">
+              <div class="integrante">
+                  <img src="./img/rocio_gonzales.jpg" alt="Rocio Gonzales" title="Rocio Gonzales">
+                  <a href="#" target="_blank">Rocio Gonzales</a>
+              </div>
+              <div class="integrante">
+                  <img src="./img/rocio_villarreal.jpg" alt="Rocio Villarreal" title="Rocio Villareal">
+                  <a href="#" target="_blank">Rocio Villareal</a>
+              </div>
+              <div class="integrante">
+                  <img src="./img/silvia_castillo.jpg" alt="Silvia Castillo" title="Silvia Castillo">
+                  <a href="#" target="_blank">Silvia Castillo</a>
+              </div>
+              <div class="integrante">
+                  <img src="./img/sofia_goszko.jpeg" alt="Sofia Goszko" title="Sofia Goszko">
+                  <a href="https://www.linkedin.com/in/sofia-lara-goszko/" target="_blank">Sofia Goszko</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!--footer-->
+      <footer class="item footer">
+        <div class="contenedor ">
+          <div class="footer_item">
+            <div class="footer_proyecto">
+              <img src="./img/icono.png" alt="proyecto_animales" title="proyecto_animales" class="footer_icono">
+              <h3>PROYECTO ANIMALES</h3>
+              <div class="social_media">
+                <a href="https://www.instagram.com/" target="_blank"><img src="./img/instagram.png" alt="instagram" title="instagram"></a>
+                <a href="https://www.facebook.com/?locale=es_LA" target="_blank"><img src="./img/facebook.png" alt="facebook" title="facebook"></a>
+                <a href="https://www.tiktok.com/" target="_blank"><img src="./img/tik-tok.png" alt="tik-tok" title="tik-tok"></a>
+                <a href="https://twitter.com/" target="_blank"><img src="./img/logotipos.png" alt="twitter" title="twitter"></a>
+              </div>
+            </div>
+          </div>
+          <div class="footer_item">
+            <nav class="footer_nav">
+              <a href="./index.html">INICIO</a>
+              <a href="./adopcion.html">ADOPCIÓN</a>
+              <a href="./donacion.html">DONAR</a>
+              <a href="./tienda.html">PET SHOP</a></li>
+              <a href="./contacto.html">CONTACTO</a></li>
+              <a href="./login.html">INGRESAR</a></li>              
+            </nav>
+          </div>
+          <div class="footer_item novedades">
+            <div class="footer_novedades">
+              <form action="">
+                <div class="footer_input">
+                  <label for="">¡Recibí las novedades en tu e-mal!</label>
+                  <input type="email" name="" id="" placeholder="Ingresá tu e-mail">
+                </div>  
+                <button type="submit" class="boton">¡SUSCRIBIRME!</button>
+              </form>
+            </div>
+          </div>
+          <div class="copyright">
+            <p>PROYECTO ANIMALES © 2024</p>
+          </div>
+        </div>
+      </footer>
+    </section>
 </body>
 </html>

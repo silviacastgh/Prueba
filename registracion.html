@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="./img/favicon-32x32.png" type="image/x-icon"> <!--favicon-->
+    <link rel="stylesheet" href="./css/estilos.css"> <!--hoja de estilos-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!--boxicon-->
+
+  
+  
+    <!--tipografia-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <title>Registración</title>
+</head>
+<body>
+    <main class="inicio">
+        <section class="wrapper">
+            <a href="./index.html"><img class="icono_registracion" src="./img/icono.png" alt=""></a> <!--enlace para volver al index-->
+            <form action="">
+                <h1>Ingresá tus datos</h1>
+
+                <!--nombre-->
+                <div class="input_box">
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" required="true">
+                    <i class='bx bxs-user'></i>
+                </div>
+
+                <!--apellido-->
+                <div class="input_box">
+                    <input type="text" name="apellido" id="apellido" placeholder="Apellido" required="true">
+                    <i class='bx bxs-user'></i>
+                </div>
+
+                <!--email-->
+                <div class="input_box">
+                    <input type="email" name="email" id="email" placeholder="E-mail" required="true">
+                    <i class='bx bxs-envelope'></i>
+                </div>    
+                
+                <!--telefono-->
+                <div class="input_box">
+                    <input type="tel" name="telefono" id="telefono" placeholder="Teléfono">
+                    <i class='bx bxs-phone'></i>
+                </div>
+
+                <!--fecha de nacimiento-->
+                <div class="input_box">
+                    <input type="text" name="fechaNac" id="fechaNac" placeholder="Fecha de nacimiento" onfocus="(this.type='date')" onblur="(this.type='text')">
+                    <i class='bx bxs-calendar'></i>
+                </div>
+
+                <!--genero-->
+                <div class="input_box">
+                    <select name="genero" id="geneto">
+                        <option value="">Seleccione su género</option>
+                        <option value="">Mujer cis</option>
+                        <option value="">Mujer trans</option>
+                        <option value="">Hombre cis</option>
+                        <option value="">Hombre trans</option>
+                        <option value="">No binario</option>
+                        <option value="">Otro</option>
+                        <option value="">Prefiero no decirlo</option>
+                    </select>
+                </div>
+
+                <!--usuario-->
+                <div class="input_box">
+                    <input type="text" name="usernameReg" id="usernameReg" placeholder="Username" required="true">
+                    <i class='bx bxs-user'></i>
+                </div>
+                <!--contraseña-->
+                <div class="input_box">
+                    <input type="password" name="passwordReg" id="passwordReg" placeholder="Password" required="true">
+                    <i class='bx bxs-lock-alt' ></i>
+                </div>
+                
+                <!--repetir contraseña-->
+                <div class="input_box">
+                    <input type="password" name="repPassword" id="repPassword" placeholder="Repedir password" required="true">
+                    <i class='bx bxs-lock-alt' ></i>
+                </div>
+
+                <!--check del recuerdame y enlace para recuperar contraseña-->
+                <div class="remember_forgot">
+                    <label><input type="checkbox" name="terminos" id="terminos"><a href="#">Acepto términos y condiciones</a></label>
+                </div>
+
+                <button type="submit" class="boton">Enviar</button> <!--boton para enviar el formulario-->
+            
+            </form>
+        </section>
+    </main>
+</body>
+</html>

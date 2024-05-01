@@ -1,45 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="shortcut icon" href="./img/favicon-32x32.png" type="image/x-icon"> <!--favicon-->
-  <link rel="stylesheet" href="./css/estilos.css"> <!--hoja de estilos-->
+    <link
+      rel="shortcut icon"
+      href="./img/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <!--favicon-->
+    <link rel="stylesheet" href="./css/estilos.css" />
+    <!--hoja de estilos-->
 
+    <!--tipografia-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
 
-  <!--tipografia-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-
-
-
-
-  <title>Inicio</title>
-</head>
-<body>
+    <title>Inicio</title>
+  </head>
+  <body>
     <section class="container">
       <!--header-->
       <header class="item header">
         <!-- en script.js -->
       </header>
 
-
       <!--main-->
       <main class="item contenido">
-
+        <!--seccion del banner-->
+        <section id="bannerDonar" class="banner">
+          <h2>APORTES ECONÓMICOS</h2>
+        </section>
+        <div>
+          <p id="pdonacion">
+            Los aportes económicos son importantes para pagar tratamientos,
+            estudios médicos y honorarios veterinarios, comprar insumos y
+            alimento, financiar campañas de castración en zonas carenciadas,
+            imprimir material de difusión entre otros.
+          </p>
+        </div>
+        <section class="formasDeDonar">
+          <div class="contenedorTarjeta">
+            <h3>TRANSFERENCIA BANCARIA</h3>
+            <p>Doná el importe que puedas directamente a nuestra cuenrta</p>
+            <p>
+              Banco Provincia Alias: PROYECTO-4-PATAS CBU:
+              0140059501500205063480 Asociación Civil Proyecto 4 Patas Cuenta
+              Corriente en pesos Nº 50634/8 Sucursal Nº: 05002 – San Antonio de
+              Padua CUIT: 30-71080554-3
+            </p>
+          </div>
+          <div class="contenedorTarjeta">
+            mercado pago
+            <div class="logoMp">
+              <img src="./img/logomp.png" alt="logoMp" />
+            </div>
+            <p>ALIAS: PROYECTO.ANIMALES</p>
+            <div class="elemento-divider"><span></span></div>
+          </div>
+          <div class="contenedorTarjeta">PayPal</div>
+          <div class="contenedorTarjeta">Donar Online</div>
+          <div class="contenedorTarjeta">
+            <a
+              class="elemento-button-wrapper"
+              href="donainsumos.html"
+              target="_blank"
+              >DONÁ INSUMOS</a
+            >
+          </div>
+        </section>
       </main>
 
       <!--footer-->
       <footer class="item footer">
         <!-- en script.js -->
       </footer>
-    
     </section>
     <script src="./js/script.js"></script>
-</body>
+  </body>
 </html>

@@ -19,7 +19,7 @@ document.querySelector("header").innerHTML = `
             <li class="dropdown">
                 <a href="./donacion.html" class="dropbtn">DONAR</a>
                 <div class="dropdown-content">
-                <a href="#">DONACIONES ECONÓMICAS</a>
+                <a href="donacion.html">DONACIONES ECONÓMICAS</a>
                 <a href="#">DONACIONES DE INSUMOS</a>
                 </div>
             </li>

@@ -513,6 +513,7 @@ div .logoMp > img{
     height: auto;
     width:cover;
     box-shadow: 0 0 12px 15px rgba(0, 0, 0, .4);
+    text-align: center;
 
 }
 

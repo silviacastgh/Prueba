@@ -502,16 +502,16 @@ body .donacion{
 
 /*--------css tarjeta mercado pago---------*/
 
-div .logoMp{
+div .a{
     width: 25%;
     padding: 5px;
     align-content: center;
 }
 
-div .logoMp > img{
-    max-width: 100%;
-    height: auto;
-    width:cover;
+ .logomp{
+    
+    
+    width: 50%;;
     box-shadow: 0 0 12px 15px rgba(0, 0, 0, .4);
     text-align: center;
 

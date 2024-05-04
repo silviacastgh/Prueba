@@ -455,6 +455,78 @@ a:hover, .dropdown:hover .dropbtn {
 }
 
 /*--------------------------------------------------*/
+/*--------------------------------------------------*/
+/*main donacion*/
+body .donacion{
+    display: flex;
+}
+#pdonacion{
+    color: #706e6e;
+}
+#bannerDonar{
+    background-image: url(/img/donacion.jpg);
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 0 2000px rgb(47 45 45 / 0.5);
+    width: 100%;
+    height: 350px;
+    padding-bottom: 10px;
+}
+.formasDeDonar{
+    display: flex;
+    flex-direction: row;
+    flex-flow:row wrap;
+    justify-content: space-around;
+  align-items: flex-start;
+  align-content: space-around;
+}
+.contenedorTarjeta{
+    background-color: #f9f2d6;
+    color: #000;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    margin: 20px 2px ;
+    cursor:default;
+    transition: all 400ms ease;
+    text-align: center;
+    display: block;
+    padding: 50px 50px;
+    width: 50 px;
+    border-radius: 10%;
+}
+
+.contenedorTarjeta:hover{
+    box-shadow: 5px 5px 20 px rgba(0, 0, 0, .4);
+    transform: translateY(-3%);
+}
+
+
+/*--------css tarjeta mercado pago---------*/
+
+div .a{
+    width: 25%;
+    padding: 5px;
+    align-content: center;
+}
+
+ .logomp{
+    
+    
+    width: 50%;;
+    box-shadow: 0 0 12px 15px rgba(0, 0, 0, .4);
+    text-align: center;
+
+}
+
+
+
+
+
+.elemento-divider{
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+
 /*responsive*/
 
 @media screen and (max-width: 1200px) {    

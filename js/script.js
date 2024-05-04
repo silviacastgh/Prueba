@@ -57,7 +57,9 @@ document.querySelector("footer").innerHTML = `
     <div class="footer_novedades">
         <form action="">
         <div class="footer_input">
+
             <label for="">¡Recibí las novedades en tu e-mail!</label>
+
             <input type="email" name="" id="" placeholder="Ingresá tu e-mail">
         </div>  
         <button type="submit" class="boton">¡SUSCRIBIRME!</button>

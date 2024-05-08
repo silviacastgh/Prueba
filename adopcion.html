@@ -11,12 +11,22 @@
   <!--tipografia-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+ <!-- <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">-->
 
-
+  <style>
+    h2 {
+        border: 2px solid #333; /* Grosor del borde y color */
+        padding: 10px; /* Espacio interno entre el borde y el texto */
+        background-color: #f0f0f0; /* Color de fondo */
+        color: #333; /* Color del texto */
+        display: inline-block; /* Hace que el elemento se comporte como un bloque, pero se ajuste al contenido */
+        border-radius: 5px; /* Borde redondeado */
+    }
+</style>
+  
 
 
   <title>Inicio</title>
@@ -25,21 +35,68 @@
     <section class="container">
       <!--header-->
       <header class="item header">
-        <!-- en script.js -->
+        <!--titulo-->
+        <div class="titulo_header">
+          
+          <h1>PROYECTO ANIMALES</h1>
+       <!--  <img src="./img/icono.png" alt="proyecto_animales" title="proyecto_animales" class="icono_header">-->
+        </div>
+        <!--barra de navegación del header-->
+        <nav class="navegation">
+            <ul>
+                <li><a href="./index.html">INICIO</a></li>
+                <li class="dropdown">   </li>
+                
+            </ul>     
+        </nav>
+        <div class="dropdown">
+          <button class="dropbtn">Selecciona una opción</button>
+          <div class="dropdown-content">
+            <a href="#">Opción 1</a>
+            <a href="#Requisitos">Requisitos</a>
+            
+          </div>
+        </div>
+
+
       </header>
-
-
+     
       <!--main-->
       <main class="item contenido">
+        <!--seccion del banner-->
+        <section id="banner">
+          <h2>REQUISITOS DE ADOPCION</h2>
+         
+        </section>
 
+        <!--seccion de historia-->
+        <section id="Requisitos" class="contenedor" >
+            <div class="contenedor_item">
+              <p style="text-align: justify;">
+                •	Los postulantes para adopción tendrán una entrevista en persona con nuestro equipo de adopción.<br>
+                    •	Las adopciones están restringidas a la zona de Berisso, Ensenada, Punta Lara, Olmos, Gonnet, City Bell, Etcheverry y La Plata.<br>
+                    •	Los adoptantes tendrán que ser mayores de edad (mayor a 21 años).<br>
+                    •	Los adoptantes deberán suscribir un contrato de adopción, comprometiéndose a garantizar una tenencia responsable a lo largo de la vida del animal.<br>
+                    •	Los animales mayores de 6 meses se entregarán castrados. En el caso de adoptar un cachorro más joven, el adoptante se compromete a castrarlo entre los 6 meses y el primer año de edad, de manera obligatoria.<br>
+                    •	La ONG se reserva el derecho de aprobar o rechazar una postulación según los criterios y valores de la organización.<br>
+                    •	Los datos proporcionados por el postulante son confidenciales y se utilizan exclusivamente para el proceso de adopción, sin transferirse a terceros en ningún caso.<br>
+                    •	Los animales serán entregados tras una cita telefónica con nuestro equipo de adopción.<br>
+                    •	Los animales adoptados llevaran una placa identificatoria donde figure además el teléfono de la organización.<br>
+                    •	La organización podrá solicitar una visita pasado los 6 meses de la adopción para llevar un seguimiento.<br>
+                                        
+                </p>
+              <h2>  Si ya lo decidiste, y te sentís capacitado, es momento de comenzar con la postulación para elegir a tu nuevo compañero de vida.</h2>
+            </div>
+            
+        </section>
+
+        
       </main>
 
       <!--footer-->
-      <footer class="item footer">
-        <!-- en script.js -->
-      </footer>
-    
+      <footer class="item footer">Footer</footer>
     </section>
     <script src="./js/script.js"></script>
+    
 </body>
 </html>

@@ -1,31 +1,44 @@
-.contenedor{
+.contenedor_tarjeta{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around ;
-  object-fit: cover;
-}
-.contenedor img {
-  width: 200px; /* Ajusta este valor al tamaño deseado */
-  height: 200px; /* Esto permite que la imagen se ajuste proporcionalmente */
-  margin-right: 10px; /* Espacio entre las imágenes */
-  margin-bottom: 10px; /* Espacio debajo de las imágenes */
 }
 
-.data{
-  width: 200px;
-  height: 200px;
-  
+/*
+.tarjeta img {
+  width: 200px; Ajusta este valor al tamaño deseado 
+  height: 200px;  Esto permite que la imagen se ajuste proporcionalmente 
 }
 
-/*.img{
+.img{
   width: 100px;
   height: 150;
   object-fit: cover;
 }
-*/    
-.cuerpo{
-  margin: 100px;
+*/
+
+.tarjeta{
+  width: 300px;
+  border: 1px solid black;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.tarjeta_imagen{
+  width: 100%;
+}
+
+.tarjeta_imagen img{
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+  
+.tarjeta_cuerpo{
+  width: 100%;
+  height: 50%;
+  margin-left: 10px;
 }
 
 

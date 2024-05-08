@@ -1,3 +1,6 @@
+
+//---------------------------------------------------------
+//header
 document.querySelector("header").innerHTML = `
     <!--titulo-->
     <div class="header_titulo">
@@ -29,6 +32,12 @@ document.querySelector("header").innerHTML = `
         </ul>     
     </nav>
 `
+
+//---------------------------------------------------------
+
+
+//---------------------------------------------------------
+//footer
 document.querySelector("footer").innerHTML = `
     <div class="contenedor ">
     <div class="footer_item">
@@ -71,3 +80,97 @@ document.querySelector("footer").innerHTML = `
     </div>
     </div>
 `
+
+
+//---------------------------------------------------------
+//conocelos
+
+//json de gatos
+let animales = [        
+    {
+        id: 1,
+        nombre: "Rick",
+        estado: "castrado",
+        edad: "3",
+        genero: "Male",
+        imagen: "https://cdn2.thecatapi.com/images/9vt.jpg",
+        creado: "2017-11-04T18:48:46.250Z"
+    },
+    {
+        id: 2,
+        nombre: "Mory",
+        estado: "sin castrar",
+        edad: "4",
+        genero: "Male",
+        imagen: "https://cdn2.thecatapi.com/images/au5.jpg",
+        creado: "2017-11-04T18:50:21.651Z"
+    },
+    {
+        id: 3,
+        nombre: "Summer",
+        estado: "castrado",
+        edad: "2",
+        genero: "Female",
+        imagen: "https://cdn2.thecatapi.com/images/b7d.jpg",
+        creado: "2017-11-04T19:09:56.428Z"
+    },
+    {
+        id: 4,
+        nombre: "Beth",
+        estado: "castrado",
+        edad: "5",
+        genero: "Female",
+        imagen: "https://cdn2.thecatapi.com/images/cdi.jpg",
+        creado: "2017-11-04T19:22:43.665Z"
+    },
+    {
+        id: 5,
+        nombre: "Jerry",
+        estado: "castrado",
+        edad: "7",
+        genero: "Male",
+        imagen: "https://cdn2.thecatapi.com/images/dte.jpg",
+        creado: "2017-11-04T19:26:56.301Z"
+    },
+    {
+        id: 6,
+        nombre: "Jenny",
+        estado: "castrado",
+        edad: "4",
+        genero: "Female",
+        imagen: "https://cdn2.thecatapi.com/images/MTc5OTc4Ng.jpg",
+        creado: "2017-11-04T19:26:56.301Z"
+    },
+    {
+      id: 7,
+      nombre: "Jerry",
+      estado: "castrado",
+      edad: "2",
+      genero: "Male",
+      imagen: "https://cdn2.thecatapi.com/images/yqcbOxkWK.jpg",
+      creado: "2017-11-04T19:26:56.301Z"
+  }
+]
+
+//variable que contendrá las tarjetas
+let cad = ``
+
+//recorro el arreglo de animales y creo las tarjetas
+for (let animal of animales) {
+  cad = cad + `
+      <div class="tarjeta">
+          <div class="tarjeta_imagen">      
+            <img src="${animal.imagen}" alt="${animal.nombre}">
+          </div>
+          <div class="tarjeta_cuerpo">
+              <p>Nombre: ${animal.nombre}</p>
+              <p>Estado: ${animal.estado}</p>
+              <p>Edad:${animal.edad}</p>
+              <p>Genero:${animal.genero}</p>
+          </div>
+      </div>
+    
+      `
+}
+
+document.querySelector(".contenedor_tarjeta").innerHTML=cad

@@ -12,8 +12,8 @@ document.querySelector("header").innerHTML = `
             <li class="dropdown">
             <a href="./adopcion.html" class="dropbtn">ADOPCIÓN</a>
             <div class="dropdown-content">
-                <a href="#">CONOCELOS</a>
-                <a href="#">REQUISITOS DE ADOPCIÓN</a>
+                <a href="./conocelos.html">CONOCELOS</a>
+                <a href="./adopcion.html">REQUISITOS DE ADOPCIÓN</a>
             </div>
             </li>
             <li class="dropdown">

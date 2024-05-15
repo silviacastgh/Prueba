@@ -21,14 +21,17 @@
     <main class="inicio">
         <section class="wrapper">
             <a href="./index.html"><img class="icono_registracion" src="./img/icono.png" alt=""></a> <!--enlace para volver al index-->
-            <form onsubmit="return validar_registracion();">
+            <form onsubmit="return validar_registracion();" enctype="multipart/form-data">
                 <h1>Ingresá tus datos</h1>
 
+                <!--avatar-->
                 <div class="avatar">
-                    <img src="./img/no-avatar.png" alt="">
-                    <input type="file" id="imagenPerfil" name="imagenPerfil" accept="image/*" required="true">
+                    <img id="avatarPreview" src="./img/no-avatar.png" alt="Avatar">
+                    <input type="file" id="imagenPerfil" name="imagenPerfil" accept="image/*"required="true">
                     <div id="validar_imagen" class="validar">&nbsp;</div>
                 </div>
+
+
                 <!--nombre-->
                 <div class="input_box">
                     <input type="text" name="nombre" id="nombre" placeholder="Nombre" required="true">

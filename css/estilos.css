@@ -298,6 +298,10 @@ a:hover, .dropdown:hover .dropbtn {
     margin: 20px 0;
 }
 
+.wrapper h1{
+    margin: 10px 0;
+}
+
 .icono{
     width: 80px;
     height: 80px;
@@ -418,11 +422,11 @@ a:hover, .dropdown:hover .dropbtn {
 }
 
 .avatar{
-    margin-top: 10px;
+    margin: 10px 0;
 }
 .avatar img{
     border-radius: 50%;
-    width: 40%;
+    width: 35%;
     margin-left: 30%;
 }
 

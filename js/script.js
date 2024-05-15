@@ -1,61 +1,47 @@
-
-//---------------------------------------------------------
-//header
-document.querySelector("header").innerHTML = `
-    <!--titulo-->
-    <div class="header_titulo">
-    <img src="./img/icono.png" alt="proyecto_animales" title="proyecto_animales" class="header_icono">
-    <h1>PROYECTO ANIMALES</h1>
-    <img src="./img/icono.png" alt="proyecto_animales" title="proyecto_animales" class="header_icono">
-    </div>
-    <!--barra de navegación del header-->
-    <nav class="navegation">
-        <ul>
-            <li><a href="./index.html">INICIO</a></li>
-            <li class="dropdown">
-            <a href="./adopcion.html" class="dropbtn">ADOPCIÓN</a>
-            <div class="dropdown-content">
-                <a href="./conocelos.html">CONOCELOS</a>
-                <a href="./adopcion.html">REQUISITOS DE ADOPCIÓN</a>
-            </div>
-            </li>
-            <li class="dropdown">
-                <a href="./donacion.html" class="dropbtn">DONAR</a>
-                <div class="dropdown-content">
-                <a href="donacion.html">DONACIONES ECONÓMICAS</a>
-                <a href="#">DONACIONES DE INSUMOS</a>
-                </div>
-            </li>
-            <li><a href="./tienda.html">PET SHOP</a></li>
-            <li><a href="./contacto.html">CONTACTO</a></li>
-            <li><a href="./login.html">INGRESAR</a></li>
-        </ul>     
-    </nav>
-`;
-
-//---------------------------------------------------------
-//index
-
-
 //---------------------------------------------------------
 //registracion
 
+// Previsualizacion de imagen
+let avatar = document.getElementById("imagenPerfil");
+let imagen = document.getElementById("avatarPreview");
+avatar.addEventListener("change", e => {
+    console.log(e);
+    if(e.target.files[0]){
+        let reader = new FileReader();
+        reader.onload = function(e){
+            imagen.src=e.target.result;
+    }
+    reader.readAsDataURL(e.target.files[0]);
+}
+});
+
 function validar_registracion(){
     //me traigo los valores del html
-    let nombre = document.getElementById("nombre");
-    let apellido = document.getElementById("apellido");
     let email = document.getElementById("email");
     let telefono = document.getElementById("telefono");
-    let fechaNac = document.getElementById("fechaNac");
-    let usuario = document.getElementById("usernameReg");
     let password = document.getElementById("passwordReg");
     let repPassword = document.getElementById("repPassword");
+    avatar.addEventListener("change", e => {console.log(e)});
     let error = false;
+
+    console.log(avatar);
 
     //expreciones regulares
     let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     let passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
     let telefonoRegex = /^\d{10}$/;
+
+
+
+    /*
+    if(avatar.files.length === 0) {
+        document.getElementById("validar_imagen").innerHTML = "Selecciona una imagen";
+        error = true;
+    } else {
+        document.getElementById("validar_imagen").innerHTML = "";
+    
+    }
+    */
 
     //email
     if(!emailRegex.test(email.value)){
@@ -108,6 +94,46 @@ function validar_registracion(){
 }
 
 
+
+
+
+
+
+
+//---------------------------------------------------------
+//header
+
+document.querySelector("header").innerHTML = `
+    <!--titulo-->
+    <div class="header_titulo">
+    <img src="./img/icono.png" alt="proyecto_animales" title="proyecto_animales" class="header_icono">
+    <h1>PROYECTO ANIMALES</h1>
+    <img src="./img/icono.png" alt="proyecto_animales" title="proyecto_animales" class="header_icono">
+    </div>
+    <!--barra de navegación del header-->
+    <nav class="navegation">
+        <ul>
+            <li><a href="./index.html">INICIO</a></li>
+            <li class="dropdown">
+            <a href="./adopcion.html" class="dropbtn">ADOPCIÓN</a>
+            <div class="dropdown-content">
+                <a href="./conocelos.html">CONOCELOS</a>
+                <a href="./adopcion.html">REQUISITOS DE ADOPCIÓN</a>
+            </div>
+            </li>
+            <li class="dropdown">
+                <a href="./donacion.html" class="dropbtn">DONAR</a>
+                <div class="dropdown-content">
+                <a href="donacion.html">DONACIONES ECONÓMICAS</a>
+                <a href="#">DONACIONES DE INSUMOS</a>
+                </div>
+            </li>
+            <li><a href="./tienda.html">PET SHOP</a></li>
+            <li><a href="./contacto.html">CONTACTO</a></li>
+            <li><a href="./login.html">INGRESAR</a></li>
+        </ul>     
+    </nav>
+`;
 
 
 //---------------------------------------------------------
@@ -248,3 +274,5 @@ for (let animal of animales) {
 }
 
 document.querySelector(".contenedor_tarjeta").innerHTML=cad;
+
+

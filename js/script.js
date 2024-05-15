@@ -1,102 +1,3 @@
-//---------------------------------------------------------
-//registracion
-
-// Previsualizacion de imagen
-let avatar = document.getElementById("imagenPerfil");
-let imagen = document.getElementById("avatarPreview");
-avatar.addEventListener("change", e => {
-    console.log(e);
-    if(e.target.files[0]){
-        let reader = new FileReader();
-        reader.onload = function(e){
-            imagen.src=e.target.result;
-    }
-    reader.readAsDataURL(e.target.files[0]);
-}
-});
-
-function validar_registracion(){
-    //me traigo los valores del html
-    let email = document.getElementById("email");
-    let telefono = document.getElementById("telefono");
-    let password = document.getElementById("passwordReg");
-    let repPassword = document.getElementById("repPassword");
-    avatar.addEventListener("change", e => {console.log(e)});
-    let error = false;
-
-    console.log(avatar);
-
-    //expreciones regulares
-    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    let passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-    let telefonoRegex = /^\d{10}$/;
-
-
-
-    /*
-    if(avatar.files.length === 0) {
-        document.getElementById("validar_imagen").innerHTML = "Selecciona una imagen";
-        error = true;
-    } else {
-        document.getElementById("validar_imagen").innerHTML = "";
-    
-    }
-    */
-
-    //email
-    if(!emailRegex.test(email.value)){
-        document.getElementById("validar_email").innerHTML = "Formato de mail incorrecto";
-        validar_mail.innerHTML = "Por favor, introduce un correo electrónico válido.";
-        error = true; // Evitar que el formulario se envíe si la validación falla
-        email.focus();
-    }else{
-        document.getElementById("validar_email").innerHTML="";
-    }
-
-    //telefono
-    if(!telefonoRegex.test(telefono.value)) {
-        document.getElementById("validar_telefono").innerHTML = "Código de área + celular [sin 15, sin espacios y sin caracteres especiales]";
-        error = true;
-        password.focus();
-    }else{
-        document.getElementById("validar_telefono").innerHTML ="";
-    }
-
-
-    //contraseña
-    if(password.value.length < 8 || !passwordRegex.test(password.value)) {
-        document.getElementById("validar_password").innerHTML = "La clave debe contener al menos ocho caracteres, una mayúscula, una minúscula, un número y un carácter especial";
-        error = true;
-        password.focus();
-    }else{
-        document.getElementById("validar_password").innerHTML ="";
-    }
-
-    //repetir contraseña
-    if(repPassword.value != password.value){
-        document.getElementById("validar_rep_password").innerHTML = "Las claves no coinciden";
-        error = true;
-        repPassword.focus();
-    }else{
-        document.getElementById("validar_rep_password").innerHTML = "";
-    }
-
-
-    if (error == false) {
-        document.getElementById("usuario").value = ""
-        document.getElementById("validar_usuario").innerHTML = "&nbsp;";
-        document.getElementById("clave").value = ""
-        document.getElementById("validar_clave").innerHTML = "&nbsp;";
-        alert("Dato enviado");
-    }
-    return !error;
-
-}
-
-
-
-
-
 
 
 
@@ -274,5 +175,104 @@ for (let animal of animales) {
 }
 
 document.querySelector(".contenedor_tarjeta").innerHTML=cad;
+
+
+//---------------------------------------------------------
+//registracion
+
+// Previsualizacion de imagen
+let avatar = document.getElementById("imagenPerfil");
+let imagen = document.getElementById("avatarPreview");
+avatar.addEventListener("change", e => {
+    console.log(e);
+    if(e.target.files[0]){
+        let reader = new FileReader();
+        reader.onload = function(e){
+            imagen.src=e.target.result;
+    }
+    reader.readAsDataURL(e.target.files[0]);
+}
+});
+
+function validar_registracion(){
+    //me traigo los valores del html
+    let email = document.getElementById("email");
+    let telefono = document.getElementById("telefono");
+    let password = document.getElementById("passwordReg");
+    let repPassword = document.getElementById("repPassword");
+    avatar.addEventListener("change", e => {console.log(e)});
+    let error = false;
+
+    console.log(avatar);
+
+    //expreciones regulares
+    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    let passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    let telefonoRegex = /^\d{10}$/;
+
+
+
+    /*
+    if(avatar.files.length === 0) {
+        document.getElementById("validar_imagen").innerHTML = "Selecciona una imagen";
+        error = true;
+    } else {
+        document.getElementById("validar_imagen").innerHTML = "";
+    
+    }
+    */
+
+    //email
+    if(!emailRegex.test(email.value)){
+        document.getElementById("validar_email").innerHTML = "Formato de mail incorrecto";
+        validar_mail.innerHTML = "Por favor, introduce un correo electrónico válido.";
+        error = true; // Evitar que el formulario se envíe si la validación falla
+        email.focus();
+    }else{
+        document.getElementById("validar_email").innerHTML="";
+    }
+
+    //telefono
+    if(!telefonoRegex.test(telefono.value)) {
+        document.getElementById("validar_telefono").innerHTML = "Código de área + celular [sin 15, sin espacios y sin caracteres especiales]";
+        error = true;
+        password.focus();
+    }else{
+        document.getElementById("validar_telefono").innerHTML ="";
+    }
+
+
+    //contraseña
+    if(password.value.length < 8 || !passwordRegex.test(password.value)) {
+        document.getElementById("validar_password").innerHTML = "La clave debe contener al menos ocho caracteres, una mayúscula, una minúscula, un número y un carácter especial";
+        error = true;
+        password.focus();
+    }else{
+        document.getElementById("validar_password").innerHTML ="";
+    }
+
+    //repetir contraseña
+    if(repPassword.value != password.value){
+        document.getElementById("validar_rep_password").innerHTML = "Las claves no coinciden";
+        error = true;
+        repPassword.focus();
+    }else{
+        document.getElementById("validar_rep_password").innerHTML = "";
+    }
+
+
+    if (error == false) {
+        document.getElementById("usuario").value = ""
+        document.getElementById("validar_usuario").innerHTML = "&nbsp;";
+        document.getElementById("clave").value = ""
+        document.getElementById("validar_clave").innerHTML = "&nbsp;";
+        alert("Dato enviado");
+    }
+    return !error;
+
+}
+
+
+
 
 

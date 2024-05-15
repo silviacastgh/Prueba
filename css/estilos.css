@@ -284,7 +284,7 @@ a:hover, .dropdown:hover .dropbtn {
 }
 
 .wrapper{
-    margin: 50px 0 50px 0;
+    margin: 70px 0 50px 0;
     width: 500px;
     background-color: transparent;
     border: 2px solir rgba(255, 255, 255, .2);
@@ -293,6 +293,9 @@ a:hover, .dropdown:hover .dropbtn {
     color: #f9f2d6;
     border-radius: 10px;
     padding: 30px;
+}
+.wrapper p{
+    margin: 20px 0;
 }
 
 .icono{

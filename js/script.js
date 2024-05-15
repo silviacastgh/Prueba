@@ -31,10 +31,82 @@ document.querySelector("header").innerHTML = `
             <li><a href="./login.html">INGRESAR</a></li>
         </ul>     
     </nav>
-`
+`;
 
 //---------------------------------------------------------
 //index
+
+
+//---------------------------------------------------------
+//registracion
+
+function validar_registracion(){
+    //me traigo los valores del html
+    let nombre = document.getElementById("nombre");
+    let apellido = document.getElementById("apellido");
+    let email = document.getElementById("email");
+    let telefono = document.getElementById("telefono");
+    let fechaNac = document.getElementById("fechaNac");
+    let usuario = document.getElementById("usernameReg");
+    let password = document.getElementById("passwordReg");
+    let repPassword = document.getElementById("repPassword");
+    let error = false;
+
+    //expreciones regulares
+    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    let passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    let telefonoRegex = /^\d{10}$/;
+
+    //email
+    if(!emailRegex.test(email.value)){
+        document.getElementById("validar_email").innerHTML = "Formato de mail incorrecto";
+        validar_mail.innerHTML = "Por favor, introduce un correo electrónico válido.";
+        error = true; // Evitar que el formulario se envíe si la validación falla
+        email.focus();
+    }else{
+        document.getElementById("validar_email").innerHTML="";
+    }
+
+    //telefono
+    if(!telefonoRegex.test(telefono.value)) {
+        document.getElementById("validar_telefono").innerHTML = "Código de área + celular [sin 15, sin espacios y sin caracteres especiales]";
+        error = true;
+        password.focus();
+    }else{
+        document.getElementById("validar_telefono").innerHTML ="";
+    }
+
+
+    //contraseña
+    if(password.value.length < 8 || !passwordRegex.test(password.value)) {
+        document.getElementById("validar_password").innerHTML = "La clave debe contener al menos ocho caracteres, una mayúscula, una minúscula, un número y un carácter especial";
+        error = true;
+        password.focus();
+    }else{
+        document.getElementById("validar_password").innerHTML ="";
+    }
+
+    //repetir contraseña
+    if(repPassword.value != password.value){
+        document.getElementById("validar_rep_password").innerHTML = "Las claves no coinciden";
+        error = true;
+        repPassword.focus();
+    }else{
+        document.getElementById("validar_rep_password").innerHTML = "";
+    }
+
+
+    if (error == false) {
+        document.getElementById("usuario").value = ""
+        document.getElementById("validar_usuario").innerHTML = "&nbsp;";
+        document.getElementById("clave").value = ""
+        document.getElementById("validar_clave").innerHTML = "&nbsp;";
+        alert("Dato enviado");
+    }
+    return !error;
+
+}
+
 
 
 
@@ -81,7 +153,7 @@ document.querySelector("footer").innerHTML = `
     <p>PROYECTO ANIMALES © 2024</p>
     </div>
     </div>
-`
+`;
 
 
 //---------------------------------------------------------
@@ -152,10 +224,10 @@ let animales = [
       imagen: "https://cdn2.thecatapi.com/images/yqcbOxkWK.jpg",
       creado: "2017-11-04T19:26:56.301Z"
   }
-]
+];
 
 //variable que contendrá las tarjetas
-let cad = ``
+let cad = ``;
 
 //recorro el arreglo de animales y creo las tarjetas
 for (let animal of animales) {
@@ -175,4 +247,4 @@ for (let animal of animales) {
       `
 }
 
-document.querySelector(".contenedor_tarjeta").innerHTML=cad
+document.querySelector(".contenedor_tarjeta").innerHTML=cad;

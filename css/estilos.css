@@ -380,7 +380,7 @@ a:hover, .dropdown:hover .dropbtn {
     display: flex;
     justify-content: space-between;
     font-size: 14px;
-    margin: -15px 0 15px;
+    margin: 5px 5px 15px;
 }
 
 .remember_forgot label input{
@@ -417,8 +417,14 @@ a:hover, .dropdown:hover .dropbtn {
 }
 
 .validar{
+    margin: 0 0 8px;
     color: red;
     font-weight: bold;
+    font-size: small;
+}
+
+.validar i{
+    color: #f9f2d6;
 }
 
 .avatar{

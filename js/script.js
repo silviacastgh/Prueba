@@ -71,7 +71,7 @@ if(document.querySelector("footer")){
 
                 <label for="">¡Recibí las novedades en tu e-mail!</label>
 
-                <input type="email" name="" id="" placeholder="Ingresá tu e-mail">
+                <input type="email" name="" id="" placeholder="Ingresá tu e-mail" required="true">
             </div>  
             <button type="submit" class="boton">¡SUSCRIBIRME!</button>
             </form>

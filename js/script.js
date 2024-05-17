@@ -183,7 +183,8 @@ if(document.querySelector(".contenedor_tarjeta")){
 }
 //---------------------------------------------------------
 //registracion
-if(document.querySelector(".wrapper")){
+if(document.querySelector(".registracion")){
+
     // Previsualizacion de imagen
     let avatar = document.getElementById("imagenPerfil");
     let imagen = document.getElementById("avatarPreview");
@@ -265,7 +266,22 @@ if(document.querySelector(".wrapper")){
     }
 }
 
+//---------------------------------------------------------
+//login
+if(document.querySelector(".login")){
+    function inicio(){
+        location.href = "./index.html";
+    }
+}
 
+
+//---------------------------------------------------------
+//recuperacion
+if(document.querySelector(".recuperacion")){
+    function inicio(){
+        location.href = "./index.html";
+    }
+}
 
 
 

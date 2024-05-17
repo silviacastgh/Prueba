@@ -21,7 +21,7 @@
     <main class="inicio">
         <section class="wrapper">
             <a href="./index.html"><img class="icono_recuperacion" src="./img/icono.png" alt=""></a> <!--enlace para volver al index-->
-            <form action="">
+            <form action="" class="recuperacion">
                 <div>
                 <h1>Recuperá tu cuenta</h1>
                 <p>
@@ -34,7 +34,7 @@
                     <input type="text" name="recuperacion" id="recuperacion" placeholder="Correo, teléfono o usuario" required="true">
                 </div>
                 
-                <button type="submit" class="boton">Enviar</button> <!--boton para enviar el formulario-->
+                <button type="submit" class="boton" onclick="inicio();">Enviar</button> <!--boton para enviar el formulario-->
                 
                 <!--enlace para crear un usuario-->
                 <div class="registrar_link">
@@ -43,6 +43,6 @@
             </form>
         </section>
     </main>
-
+    <script src="./js/script.js"></script>
 </body>
 </html>

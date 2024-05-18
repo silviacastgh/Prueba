@@ -269,8 +269,18 @@ if(document.querySelector(".registracion")){
 //---------------------------------------------------------
 //login
 if(document.querySelector(".login")){
-    function inicio(){
-        location.href = "./index.html";
+    function validar_ingreso(){
+        let usuario = document.getElementById("username").value;
+        let password = document.getElementById("password").value;
+
+        //si alguno de los valores es vacio
+        if(usuario.trim() == 0 || password.trim() == 0){
+            return false;
+        }
+
+        window.location.href = "./index.html";
+        alert("Bienvenido!");
+        //false;
     }
 }
 

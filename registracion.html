@@ -21,8 +21,16 @@
     <main class="inicio">
         <section class="wrapper">
             <a href="./index.html"><img class="icono_registracion" src="./img/icono.png" alt=""></a> <!--enlace para volver al index-->
-            <form action="">
+            <form onsubmit="return validar_registracion();" enctype="multipart/form-data" class="registracion">
                 <h1>Ingresá tus datos</h1>
+
+                <!--avatar-->
+                <div class="avatar">
+                    <img id="avatarPreview" src="./img/no-avatar.png" alt="Avatar">
+                    <input type="file" id="imagenPerfil" name="imagenPerfil" accept="image/*"required="true">
+                    <div id="validar_imagen" class="validar">&nbsp;</div>
+                </div>
+
 
                 <!--nombre-->
                 <div class="input_box">
@@ -40,23 +48,25 @@
                 <div class="input_box">
                     <input type="email" name="email" id="email" placeholder="E-mail" required="true">
                     <i class='bx bxs-envelope'></i>
+                    <div id="validar_email" class="validar">&nbsp;    </div>
                 </div>    
                 
                 <!--telefono-->
-                <div class="input_box">
-                    <input type="tel" name="telefono" id="telefono" placeholder="Teléfono">
+                <div class="validar input_box">
+                    <input type="tel" name="telefono" id="telefono" placeholder="Teléfono" required="true">
                     <i class='bx bxs-phone'></i>
                 </div>
+                <div id="validar_telefono" class="validar">&nbsp;    </div>
 
                 <!--fecha de nacimiento-->
                 <div class="input_box">
-                    <input type="text" name="fechaNac" id="fechaNac" placeholder="Fecha de nacimiento" onfocus="(this.type='date')" onblur="(this.type='text')">
+                    <input type="text" name="fechaNac" id="fechaNac" placeholder="Fecha de nacimiento" onfocus="(this.type='date')" onblur="(this.type='text')" required="true">
                     <i class='bx bxs-calendar'></i>
                 </div>
 
                 <!--genero-->
                 <div class="input_box">
-                    <select name="genero" id="geneto">
+                    <select name="genero" id="geneto" required="true">
                         <option value="">Seleccione su género</option>
                         <option value="">Mujer cis</option>
                         <option value="">Mujer trans</option>
@@ -74,20 +84,23 @@
                     <i class='bx bxs-user'></i>
                 </div>
                 <!--contraseña-->
-                <div class="input_box">
+                <div class="input_box validar">
                     <input type="password" name="passwordReg" id="passwordReg" placeholder="Password" required="true">
                     <i class='bx bxs-lock-alt' ></i>
+                   
                 </div>
+                <div id="validar_password" class="validar">&nbsp;    </div>
                 
                 <!--repetir contraseña-->
-                <div class="input_box">
+                <div class="input_box validar">
                     <input type="password" name="repPassword" id="repPassword" placeholder="Repedir password" required="true">
-                    <i class='bx bxs-lock-alt' ></i>
+                    <i class='bx bxs-lock-alt' ></i> 
                 </div>
+                <div id="validar_rep_password" class="validar">&nbsp;    </div>
 
                 <!--check del recuerdame y enlace para recuperar contraseña-->
                 <div class="remember_forgot">
-                    <label><input type="checkbox" name="terminos" id="terminos"><a href="#">Acepto términos y condiciones</a></label>
+                    <label><input type="checkbox" name="terminos" id="terminos" required="true"><a href="#">Acepto términos y condiciones</a></label>
                 </div>
 
                 <button type="submit" class="boton">Enviar</button> <!--boton para enviar el formulario-->
@@ -95,5 +108,6 @@
             </form>
         </section>
     </main>
+    <script src="./js/script.js"></script>
 </body>
 </html>

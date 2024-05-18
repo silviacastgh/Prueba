@@ -28,7 +28,6 @@ if(document.querySelector("header")){
                     <a href="#">DONACIONES DE INSUMOS</a>
                     </div>
                 </li>
-                <li><a href="./tienda.html">PET SHOP</a></li>
                 <li><a href="./contacto.html">CONTACTO</a></li>
                 <li><a href="./login.html">INGRESAR</a></li>
             </ul>     
@@ -59,7 +58,6 @@ if(document.querySelector("footer")){
             <a href="./index.html">INICIO</a>
             <a href="./adopcion.html">ADOPCIÓN</a>
             <a href="./donacion.html">DONAR</a>
-            <a href="./tienda.html">PET SHOP</a></li>
             <a href="./contacto.html">CONTACTO</a></li>
             <a href="./login.html">INGRESAR</a></li>              
         </nav>

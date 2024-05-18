@@ -288,8 +288,16 @@ if(document.querySelector(".login")){
 //---------------------------------------------------------
 //recuperacion
 if(document.querySelector(".recuperacion")){
-    function inicio(){
-        location.href = "./index.html";
+    function validar_recuperacion(){
+        let dato = document.getElementById("recuperacion").value;
+
+        //si no se envio nada
+        if(dato.trim() == 0){
+            return false;
+        }
+
+        window.location.href = "./index.html";
+        alert("Se envió enlace de recuperación");
     }
 }
 

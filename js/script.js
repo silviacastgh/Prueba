@@ -67,11 +67,11 @@ if(document.querySelector("footer")){
         <div class="footer_item novedades">
         <div class="footer_novedades">
             <form action="">
-            <div class="footer_input">
+            <div class="footer_input" onsubmit="return quiere_novedades()">
 
                 <label for="">¡Recibí las novedades en tu e-mail!</label>
 
-                <input type="email" name="" id="" placeholder="Ingresá tu e-mail" required="true">
+                <input type="email" name="" id="email_novedades" placeholder="Ingresá tu e-mail" required="true">
             </div>  
             <button type="submit" class="boton">¡SUSCRIBIRME!</button>
             </form>
@@ -208,8 +208,6 @@ if(document.querySelector(".registracion")){
         avatar.addEventListener("change", e => {console.log(e)});
         let error = false;
 
-        console.log(avatar);
-
         //expreciones regulares
         let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         let passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
@@ -255,14 +253,18 @@ if(document.querySelector(".registracion")){
 
 
         if (error == false) {
+            /*
             document.getElementById("usuario").value = ""
             document.getElementById("validar_usuario").innerHTML = "&nbsp;";
             document.getElementById("clave").value = ""
             document.getElementById("validar_clave").innerHTML = "&nbsp;";
-            alert("Dato enviado");
+            return error;*/
+            alert("Gracias por registrarte!");
+            window.location.href = "./index.html";
+            return error;
+            
         }
         return !error;
-
     }
 }
 

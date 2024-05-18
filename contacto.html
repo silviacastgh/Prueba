@@ -30,12 +30,51 @@
 
 
       <!--main-->
-      <main class="item contenido">
+      <main class="contenido">
         <!--seccion del banner-->
-        <section class="banner" id="contacto">
+        <section class="banner" id="banner_contacto">
           <h2>CONTACTO</h2>
         </section>
 
+        <!--formulario de contacto-->
+        <section>
+          <form action="" class="contacto_formulario">
+            <p>Para contactarse con nosotros complete el siguiente formulario y seleccione el área a donde quiere dirigirse. Muchas gracias.</p>
+            <!--nombre-->
+            <div class="contacto_input">
+                <label for="">Nombre y apellido</label>
+                <input type="text" name="nombre_apellido" id="nombre_apellidp" required="true">
+            </div>
+
+            <!--email-->
+            <div class="contacto_input">
+                <label for="">E-mail</label>
+                <input type="email" name="email_contacto" id="email_contacto" placeholder="" required="true">
+            </div>    
+
+            <!--area de contacto-->
+            <div class="contacto_input">
+                <label for="">Área de contacto</label>
+                <select name="area_contacto" id="area_contacto" required="true">
+                    <option value="">Adopciones</option>
+                    <option value="">Donaciones</option>
+                    <option value="">Otro</option>
+                </select>
+            </div>
+
+            <div class="contacto_input">
+              <label for="">Mensaje</label>
+              <textarea name="mensaje" id="mensaje" rows="10"></textarea>
+            </div>
+
+            <button type="submit" class="boton">Enviar</button> <!--boton para enviar el formulario-->
+          </form>
+        </section>
+
+        <!--mapa-->
+        <section>
+
+        </section>
       </main>
 
       <!--footer-->

@@ -222,11 +222,43 @@ a:hover, .dropdown:hover .dropbtn {
 
 /*--------------------------------------------------*/
 /*main del contacto*/
-#contacto{
+#banner_contacto{
     background-image: url("/img/gatito2.jpg");
     background-size: cover;
     background-position: center;
 }
+
+.contacto_formulario{
+    width: 50%;
+    color:#f65577;
+    padding: 20px;
+}
+
+.contacto_formulario p{
+    font-size: 16px;
+    margin: 15px 0 0 10px;
+    text-align: justify;
+    line-height: 2em;
+}
+
+.contacto_input{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.contacto_input input, textarea, select{
+    width: 100%;
+    height: 100%;
+    border: 0.5px solid #f65577;
+    border-radius: 5px;
+    padding: 10px 20px 10px;
+    font-size: 16px;
+    margin-top: 15px;
+    color:#f65577;
+
+}
+
 
 /*--------------------------------------------------*/
 /*main de adopción*/
@@ -642,6 +674,10 @@ div .a{
 
     .novedades{
         width: 90%;
+    }
+
+    .contacto_formulario{
+        width: 100%;
     }
 }
 

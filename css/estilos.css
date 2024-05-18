@@ -143,8 +143,9 @@ a:hover, .dropdown:hover .dropbtn {
     color: #f9f2d6;
     font-size: 75px;
     text-shadow: 1px 1px 2px black;
-    padding: 240px 0 0 10px;
+    padding: 210px 0 0 10px;
     text-align: left;
+ 
 }
 
 #index{
@@ -228,17 +229,30 @@ a:hover, .dropdown:hover .dropbtn {
     background-position: center;
 }
 
-.contacto_formulario{
+.contacto{
     width: 50%;
-    color:#f65577;
-    padding: 20px;
+    height: 750px;
 }
 
-.contacto_formulario p{
-    font-size: 16px;
-    margin: 15px 0 0 10px;
-    text-align: justify;
-    line-height: 2em;
+.contacto iframe{
+    width: 100%;
+    padding: 25px;
+}
+
+.contacto h3{
+    font-size: 35px;
+    line-height: 44px;
+    font-weight: 300;
+    padding: 25px;
+}
+
+.contacto_redes{
+    margin-left: 15px;
+}
+
+.contacto_formulario{
+    color:black;
+    padding: 0 20px 20px 20px;
 }
 
 .contacto_input{
@@ -247,18 +261,23 @@ a:hover, .dropdown:hover .dropbtn {
     padding: 10px;
 }
 
-.contacto_input input, textarea, select{
-    width: 100%;
+.contacto_input input, .contacto_input textarea, .contacto_input select{
+    width: 90%;
     height: 100%;
-    border: 0.5px solid #f65577;
+    border: 0.5px solid black;
     border-radius: 5px;
     padding: 10px 20px 10px;
     font-size: 16px;
     margin-top: 15px;
-    color:#f65577;
+    color:black;
 
 }
 
+.boton.contacto_boton{
+    border: 0.5px solid black;
+    margin-top: 10px;
+    width: 90%;
+}
 
 /*--------------------------------------------------*/
 /*main de adopción*/
@@ -628,9 +647,6 @@ div .a{
 }
 
 
-
-
-
 .elemento-divider{
     padding-top: 2px;
     padding-bottom: 2px;
@@ -644,16 +660,26 @@ div .a{
     .wrapper{
         width: 40%;
     }
+    .banner h2{
+        font-size: 70px;
+    }
 }
 
 @media screen and (max-width: 1024px) {    
     .wrapper{
         width: 50%;
     }
+    .banner h2{
+        font-size: 60px;
+    }
+
 }
 
 @media screen and (max-width: 850px) {     
-    
+    .banner h2{
+        font-size: 45px;
+    }
+
     .header_icono{
         width: 90px;
         height: 90px;
@@ -676,7 +702,7 @@ div .a{
         width: 90%;
     }
 
-    .contacto_formulario{
+    .contacto{
         width: 100%;
     }
 }

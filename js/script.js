@@ -282,6 +282,7 @@ if(document.querySelector(".login")){
 
         window.location.href = "./index.html";
         alert("Bienvenido!");
+        return true;
         //false;
     }
 }
@@ -300,6 +301,7 @@ if(document.querySelector(".recuperacion")){
 
         window.location.href = "./index.html";
         alert("Se envió enlace de recuperación");
+        return true;
     }
 }
 

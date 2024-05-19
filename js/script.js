@@ -304,4 +304,22 @@ if(document.querySelector(".recuperacion")){
 }
 
 
+//---------------------------------------------------------
+//contacto
+if(document.querySelector(".contacto_formulario")){
+    function validar_contacto(){
+        let dato = document.getElementById("mensaje").value;
+
+        //si no se envio nada
+        if(dato.trim() == 0){
+            return false;
+        }
+
+        alert("Gracias por tu consulta! Pronto te estaremos respondiendo");
+        return true;
+    }
+}
+
+
+
 

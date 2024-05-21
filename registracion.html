@@ -27,9 +27,9 @@
                 <!--avatar-->
                 <div class="avatar">
                     <img id="avatarPreview" src="./img/no-avatar.png" alt="Avatar">
-                    <input type="file" id="imagenPerfil" name="imagenPerfil" accept="image/*"required="true">
-                    <div id="validar_imagen" class="validar">&nbsp;</div>
+                    <input type="file" id="imagenPerfil" name="imagenPerfil" accept="image/*">
                 </div>
+                <div id="validar_imagen" class="validar">&nbsp; </div>
 
 
                 <!--nombre-->
@@ -61,10 +61,11 @@
                 <div id="validar_telefono" class="validar">&nbsp;    </div>
 
                 <!--fecha de nacimiento-->
-                <div class="input_box">
-                    <input type="text" name="fechaNac" id="fechaNac" placeholder="Fecha de nacimiento" onfocus="(this.type='date')" onblur="(this.type='text')" required="true">
+                <div class="input_box validar">
+                    <input type="text" name="fechaNac" id="fechaNac" placeholder="Fecha de nacimiento" onfocus="(this.type='date')" onblur="(this.type='text')">
                     <i class='bx bxs-calendar'></i>
                 </div>
+                <div id="validar_fecha" class="validar">&nbsp;    </div>
 
                 <!--genero-->
                 <div class="input_box validar">

@@ -186,23 +186,29 @@ if(document.querySelector(".registracion")){
     // Previsualizacion de imagen
     let avatar = document.getElementById("imagenPerfil");
     let imagen = document.getElementById("avatarPreview");
+ 
+
     avatar.addEventListener("change", e => {
         console.log(e);
         if(e.target.files[0]){
             let reader = new FileReader();
             reader.onload = function(e){
                 imagen.src=e.target.result;
+            }
+            reader.readAsDataURL(e.target.files[0]);
+
         }
-        reader.readAsDataURL(e.target.files[0]);
-    }
+
     });
 
     function validar_registracion(){
         //me traigo los valores del html
+        let imagen = document.getElementById("imagenPerfil");
         let nombre = document.getElementById("nombre");
         let apellido = document.getElementById("apellido")
         let email = document.getElementById("email");
         let telefono = document.getElementById("telefono");
+        let fecha = document.getElementById("fechaNac");
         let genero = document.getElementById("genero");
         let genero_seleccionado = genero.options[genero.selectedIndex].value;
         let usuario = document.getElementById("usernameReg");
@@ -217,13 +223,21 @@ if(document.querySelector(".registracion")){
         let passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
         let telefonoRegex = /^\d{10}$/;
 
+        //imagen
+        if(imagen.files.length === 0){
+            document.getElementById("validar_imagen").innerHTML="Seleccione una imagen";
+            error = true;
+        }else{
+            document.getElementById("validar_imagen").innerHTML="";
+        }
+
+
         //nombre
         if(nombre.value.trim() == 0){
             document.getElementById("validar_nombre").innerHTML = "Complete su nombre";
             error = true; // Evitar que el formulario se envíe si la validación falla
         }else{
             document.getElementById("validar_nombre").innerHTML="";
-            error = false;
         }
 
         //apellido
@@ -249,6 +263,14 @@ if(document.querySelector(".registracion")){
             error = true;
         }else{
             document.getElementById("validar_telefono").innerHTML ="";
+        }
+
+        //fecha de nacimiento
+        if(fecha.value === ""){
+            document.getElementById("validar_fecha").innerHTML = "Seleccione su fecha de nacimiento";
+            error = true; // Evitar que el formulario se envíe si la validación falla
+        }else{
+            document.getElementById("validar_fecha").innerHTML="";
         }
 
         //genero

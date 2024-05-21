@@ -199,11 +199,17 @@ if(document.querySelector(".registracion")){
 
     function validar_registracion(){
         //me traigo los valores del html
+        let nombre = document.getElementById("nombre");
+        let apellido = document.getElementById("apellido")
         let email = document.getElementById("email");
         let telefono = document.getElementById("telefono");
+        let genero = document.getElementById("genero");
+        let genero_seleccionado = genero.options[genero.selectedIndex].value;
+        let usuario = document.getElementById("usernameReg");
         let password = document.getElementById("passwordReg");
         let repPassword = document.getElementById("repPassword");
-        avatar.addEventListener("change", e => {console.log(e)});
+        let terminos = document.getElementById("terminos");
+
         let error = false;
 
         //expreciones regulares
@@ -211,12 +217,28 @@ if(document.querySelector(".registracion")){
         let passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
         let telefonoRegex = /^\d{10}$/;
 
+        //nombre
+        if(nombre.value.trim() == 0){
+            document.getElementById("validar_nombre").innerHTML = "Complete su nombre";
+            error = true; // Evitar que el formulario se envíe si la validación falla
+        }else{
+            document.getElementById("validar_nombre").innerHTML="";
+            error = false;
+        }
+
+        //apellido
+        if(apellido.value.trim() == 0){
+            document.getElementById("validar_apellido").innerHTML = "Complete su apellido";
+            error = true; // Evitar que el formulario se envíe si la validación falla
+        }else{
+            document.getElementById("validar_apellido").innerHTML="";
+        }
+        
+
         //email
         if(!emailRegex.test(email.value)){
             document.getElementById("validar_email").innerHTML = "Formato de mail incorrecto";
-            validar_mail.innerHTML = "Por favor, introduce un correo electrónico válido.";
             error = true; // Evitar que el formulario se envíe si la validación falla
-            email.focus();
         }else{
             document.getElementById("validar_email").innerHTML="";
         }
@@ -225,17 +247,30 @@ if(document.querySelector(".registracion")){
         if(!telefonoRegex.test(telefono.value)) {
             document.getElementById("validar_telefono").innerHTML = "Código de área + celular [sin 15, sin espacios y sin caracteres especiales]";
             error = true;
-            password.focus();
         }else{
             document.getElementById("validar_telefono").innerHTML ="";
         }
 
+        //genero
+        if(genero_seleccionado === ""){
+            document.getElementById("validar_genero").innerHTML = "Seleccione una opción";
+            error = true;
+        }else{
+            document.getElementById("validar_genero").innerHTML ="";
+        }
+
+        //usuario
+        if(usuario.value.trim() == 0){
+            document.getElementById("validar_usuario").innerHTML = "Complete el usuario";
+            error = true; // Evitar que el formulario se envíe si la validación falla
+        }else{
+            document.getElementById("validar_usuario").innerHTML="";
+        }
 
         //contraseña
         if(password.value.length < 8 || !passwordRegex.test(password.value)) {
             document.getElementById("validar_password").innerHTML = "La clave debe contener al menos ocho caracteres, una mayúscula, una minúscula, un número y un carácter especial";
             error = true;
-            password.focus();
         }else{
             document.getElementById("validar_password").innerHTML ="";
         }
@@ -244,19 +279,20 @@ if(document.querySelector(".registracion")){
         if(repPassword.value != password.value){
             document.getElementById("validar_rep_password").innerHTML = "Las claves no coinciden";
             error = true;
-            repPassword.focus();
         }else{
             document.getElementById("validar_rep_password").innerHTML = "";
         }
 
+        //terminos y condiciones
+        if(terminos.checked === false){
+            document.getElementById("validar_terminos").innerHTML = "Por favor acepte los términos y condiciones";
+            error = true;
+        }else{
+            document.getElementById("validar_terminos").innerHTML = "";
+        }
+
 
         if (error == false) {
-            /*
-            document.getElementById("usuario").value = ""
-            document.getElementById("validar_usuario").innerHTML = "&nbsp;";
-            document.getElementById("clave").value = ""
-            document.getElementById("validar_clave").innerHTML = "&nbsp;";
-            return error;*/
             alert("Gracias por registrarte!");
             window.location.href = "./index.html";
             return error;
@@ -272,15 +308,31 @@ if(document.querySelector(".login")){
     function validar_ingreso(){
         let usuario = document.getElementById("username").value;
         let password = document.getElementById("password").value;
+        let error = false;
 
-        //si alguno de los valores es vacio
-        if(usuario.trim() == 0 || password.trim() == 0){
-            return false;
+        //usuario
+        if(usuario.trim() == 0 ){
+            document.getElementById("validar_login_usuario").innerHTML = "Ingrese el usuario";
+            error = true;
+        }else{
+            document.getElementById("validar_login_usuario").innerHTML = "";
         }
 
-        window.location.href = "./index.html";
-        alert("Bienvenido!");
-        return true;
+        //contraseña
+        if(password.trim() == 0 ){
+            document.getElementById("validar_login_password").innerHTML = "Ingrese la contraseña";
+            error = true;
+        }else{
+            document.getElementById("validar_login_password").innerHTML = "";
+        }
+
+        if (error == false) {
+            alert("Bienvenido!");
+            window.location.href = "./index.html";
+            return error;
+            
+        }
+        return !error;
         //false;
     }
 }
@@ -291,15 +343,22 @@ if(document.querySelector(".login")){
 if(document.querySelector(".recuperacion")){
     function validar_recuperacion(){
         let dato = document.getElementById("recuperacion").value;
+        let error = false;
 
         //si no se envio nada
         if(dato.trim() == 0){
-            return false;
+            document.getElementById("validar_recuperacion").innerHTML = "Ingrese correro, teléfono o usuario";
+            error = true;
+        }else{
+            document.getElementById("validar_recuperacion").innerHTML = "";
         }
 
-        window.location.href = "./index.html";
-        alert("Se envió enlace de recuperación");
-        return true;
+        if (error == false) {
+            alert("Se envió enlace de recuperación");
+            window.location.href = "./index.html";
+            return error;        
+        }
+        return !error;
     }
 }
 

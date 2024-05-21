@@ -17,9 +17,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
   
 
-
-
-
   <title>Contacto</title>
 </head>
 <body>
@@ -45,30 +42,36 @@
               <!--nombre-->
               <div class="contacto_input">
                   <label for="">Nombre y apellido</label>
-                  <input type="text" name="nombre_apellido" id="nombre_apellidp" required="true">
+                  <input type="text" name="nombre_apellido" id="nombre_apellido">
               </div>
+              <div id="validar_nombre_apellido" class="validar">&nbsp; </div>
 
               <!--email-->
               <div class="contacto_input">
                   <label for="">E-mail</label>
-                  <input type="email" name="email_contacto" id="email_contacto" placeholder="" required="true">
+                  <input type="email" name="email_contacto" id="email_contacto" placeholder="">
               </div>    
+              <div id="validar_email_contacto" class="validar">&nbsp; </div>
 
               <!--area de contacto-->
               <div class="contacto_input">
                   <label for="">Área de contacto</label>
-                  <select name="area_contacto" id="area_contacto" required="true">
+                  <select name="area_contacto" id="area_contacto">
                       <option value=""></option>
-                      <option value="">Adopciones</option>
-                      <option value="">Donaciones</option>
-                      <option value="">Otro</option>
+                      <option value="adopciones">Adopciones</option>
+                      <option value="donaciones">Donaciones</option>
+                      <option value="otro">Otro</option>
                   </select>
               </div>
+              <div id="validar_area" class="validar">&nbsp; </div>
 
+              <!--mensaje-->
               <div class="contacto_input">
                 <label for="">Mensaje</label>
-                <textarea name="mensaje" id="mensaje" rows="10" required="true"></textarea>
+                <textarea name="mensaje" id="mensaje" rows="10"></textarea>
               </div>
+              <div id="validar_mensaje_contacto" class="validar">&nbsp; </div>
+
               <div>
                 <button type="submit" class="boton contacto_boton">Enviar</button> <!--boton para enviar el formulario-->
               </div>

@@ -389,15 +389,57 @@ if(document.querySelector(".recuperacion")){
 //contacto
 if(document.querySelector(".contacto_formulario")){
     function validar_contacto(){
-        let dato = document.getElementById("mensaje").value;
+        //valores de html
+        let nombre_apellido = document.getElementById("nombre_apellido").value;
+        let mensaje = document.getElementById("mensaje").value;
+        let email = document.getElementById("email_contacto").value;
+        let area = document.getElementById("area_contacto");
+        let area_seleccionada = area.options[area.selectedIndex].value;
 
-        //si no se envio nada
-        if(dato.trim() == 0){
-            return false;
+        error = false;
+
+        //expreciones regulares
+        let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        //nombre
+        if(nombre_apellido.trim() == 0){
+            document.getElementById("validar_nombre_apellido").innerHTML = "Complete su nombre";
+            error = true; // Evitar que el formulario se envíe si la validación falla
+        }else{
+            document.getElementById("validar_nombre_apellido").innerHTML="";
         }
 
-        alert("Gracias por tu consulta! Pronto te estaremos respondiendo");
-        return true;
+       //email
+        if(!emailRegex.test(email)){
+            document.getElementById("validar_email_contacto").innerHTML = "Ingrese un mail con formato correcto";
+            error = true; // Evitar que el formulario se envíe si la validación falla
+        }else{
+            document.getElementById("validar_email_contacto").innerHTML="";
+        }
+
+        //area
+        if(area_seleccionada === ""){
+            document.getElementById("validar_area").innerHTML = "Seleccione un área";
+            error = true;
+        }else{
+            document.getElementById("validar_area").innerHTML ="";
+        }
+
+        //si no se envio nada
+        if(mensaje.trim() == 0){
+            document.getElementById("validar_mensaje_contacto").innerHTML = "Ingrese mensaje a enviar";
+            error = true; // Evitar que el formulario se envíe si la validación falla
+        }else{
+            document.getElementById("validar_mensaje_contacto").innerHTML="";
+        }
+
+        if (error == false) {
+            alert("Gracias por tu consulta! Pronto te estaremos respondiendo");
+            window.location.href = "./index.html";
+            return error;        
+        }
+
+        return !error;
     }
 }
 

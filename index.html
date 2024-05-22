@@ -39,50 +39,52 @@
         <!--seccion de historia-->
         <section id="historia" class="contenedor">
             <div class="contenedor_historia">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quos vitae tempore repudiandae sint assumenda commodi et! 
-                    Consectetur pariatur, eaque officiis praesentium vel quis minus culpa excepturi quo repudiandae vitae illum, labore sit 
-                    eos necessitatibus, iusto odio debitis tenetur! Corporis quidem ea nobis sint laborum cumque nesciunt expedita assumenda 
-                    ut. Adipisci beatae facilis, recusandae impedit dicta repellat expedita maiores aliquid, eveniet esse, perspiciatis con
-                    sectetur ad est. Saepe excepturi nobis sunt eum mollitia iste nisi aliquid incidunt similique quae quasi laudantium, solu
-                    ta nostrum quidem totam qui repellat nemo. Amet, odit! Fugit expedita praesentium, eum ratione ex sed ipsam repellat volu
-                    ptatibus et.
-                </p>
+            
+              <p>En <strong>Proyecto Animales</strong>, estamos dedicadas a hacer una diferencia en las vidas de los animales necesitados y
+              en las familias que desean darles un hogar lleno de amor y cuidado. </p>
+              
+             <p>En nuestro mundo, los animales juegan un papel crucial: nos brindan amor incondicional, compañía y alegría. 
+              Sin embargo, no todos tienen la suerte de tener un hogar amoroso. Es por eso que nos hemos comprometido a 
+              conectarlos con personas como vos, que están listas para abrir sus corazones y sus hogares a un nuevo integrante. </p>
+              
+              </p>Cada animal que encontrarás en nuestra página tiene su propia historia única y especial. Desde adorables 
+              cachorros y gatitos hasta perros y gatos más adultos que solo necesitan una segunda oportunidad, cada uno de 
+              ellos está esperando ansiosamente encontrar a su compañero humano perfecto.</p>
+              
+              </p>Nuestro <strong>objetivo</strong> es más que simplemente encontrar hogares para estos animales. También nos esforzamos por 
+              educar a la comunidad sobre la importancia de la adopción responsable, el cuidado adecuado de las mascotas y 
+              la promoción del bienestar animal en general.</p>
+              
+              </p>Gracias por ser parte de esta hermosa misión de amor y compasión.</p>
             </div>
             <div class="contenedor_historia">
-                <img src="./img/prueba_grupo.jpg" alt="equipo_5" title="equipo_5">
+              <iframe src="https://www.youtube.com/embed/Rf67HFWD4Kg?si=bRCiK5RplDuG_F9F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <!--<img src="./img/prueba_grupo.jpg" alt="equipo_5" title="equipo_5">-->
             </div>
         </section>
 
         <!--integrantes del equipo-->
-        <section id="equipo">
-            <h2>INTEGRANTES</h2> 
+         <section id="equipo">
+          <div id="app">
+            <h2>INTEGRANTES</h2>
             <div class="contenedor">
-              <div class="integrante">
-                  <img src="./img/rocio_gonzales.jpg" alt="Rocio Gonzales" title="Rocio Gonzales">
-                  <a href="#" target="_blank">Rocio Gonzales</a>
-              </div>
-              <div class="integrante">
-                  <img src="./img/foto Ro.jpg" alt="Rocio Villarreal" title="Rocio Villareal">
-                  <a href="#" target="_blank">Rocio Villarreal</a>
-              </div>
-              <div class="integrante">
-                  <img src="./img/silvia_castillo.jpg" alt="Silvia Castillo" title="Silvia Castillo">
-                  <a href="#" target="_blank">Silvia Castillo</a>
-              </div>
-              <div class="integrante">
-                  <img src="./img/sofia_goszko.jpeg" alt="Sofia Goszko" title="Sofia Goszko">
-                  <a href="https://www.linkedin.com/in/sofia-lara-goszko/" target="_blank">Sofia Goszko</a>
+              <div class="integrante" v-for="elemento in datos">
+                  <img :src="elemento.img" :alt="elemento.nombre" :title="elemento.nombre">
+                  <a :href="elemento.url" target="_blank">{{elemento.nombre}}</a>
+               </div>
             </div>
           </div>
         </section>
+        
       </main>
 
       <!--footer-->
       <footer class="item footer">
         <!-- en script.js -->
-      </footer>
-    
+      </footer> 
     </section>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/integrantes.js"></script>  
     <script src="./js/script.js"></script>
 </body>
 </html>

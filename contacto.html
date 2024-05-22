@@ -15,11 +15,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  
 
-
-
-
-  <title>Inicio</title>
+  <title>Contacto</title>
 </head>
 <body>
     <section class="container">
@@ -30,12 +28,69 @@
 
 
       <!--main-->
-      <main class="item contenido">
+      <main class="contenido">
         <!--seccion del banner-->
-        <section class="banner" id="contacto">
+        <section class="banner" id="banner_contacto">
           <h2>CONTACTO</h2>
         </section>
 
+        <section class="contenedor">
+          <!--formulario de contacto-->
+          <div class="contacto">
+            <h3>COMPLETA EL FORMULARIO</h3>
+            <form action="" class="contacto_formulario" onsubmit="return validar_contacto()">
+              <!--nombre-->
+              <div class="contacto_input">
+                  <label for="">Nombre y apellido</label>
+                  <input type="text" name="nombre_apellido" id="nombre_apellido">
+              </div>
+              <div id="validar_nombre_apellido" class="validar">&nbsp; </div>
+
+              <!--email-->
+              <div class="contacto_input">
+                  <label for="">E-mail</label>
+                  <input type="email" name="email_contacto" id="email_contacto" placeholder="">
+              </div>    
+              <div id="validar_email_contacto" class="validar">&nbsp; </div>
+
+              <!--area de contacto-->
+              <div class="contacto_input">
+                  <label for="">Área de contacto</label>
+                  <select name="area_contacto" id="area_contacto">
+                      <option value=""></option>
+                      <option value="adopciones">Adopciones</option>
+                      <option value="donaciones">Donaciones</option>
+                      <option value="otro">Otro</option>
+                  </select>
+              </div>
+              <div id="validar_area" class="validar">&nbsp; </div>
+
+              <!--mensaje-->
+              <div class="contacto_input">
+                <label for="">Mensaje</label>
+                <textarea name="mensaje" id="mensaje" rows="10"></textarea>
+              </div>
+              <div id="validar_mensaje_contacto" class="validar">&nbsp; </div>
+
+              <div>
+                <button type="submit" class="boton contacto_boton">Enviar</button> <!--boton para enviar el formulario-->
+              </div>
+            </form>
+          </div>
+
+          <!--mapa-->
+          <div class="contacto">
+              <h3>ENCONTRANOS EN</h3>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.403140866699!2d-57.95716522519365!3d-34.92142507434485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e62e3fc93575%3A0x6ffaec3bf616e000!2sPlaza%20Moreno!5e0!3m2!1ses!2sar!4v1716061257346!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <h3>SEGUINOS EN</h3>
+              <div class="contacto_redes">
+                <a href="https://www.instagram.com/" target="_blank"><img src="./img/contacto_instagram.png" alt=""></a>
+                <a href="https://www.facebook.com/?locale=es_LA" target="_blank"><img src="./img/contacto_facebook.png" alt=""></a>
+                <a href="https://www.tiktok.com/" target="_blank"><img src="./img/contacto_tik-tok.png" alt=""></a>
+                <a href="https://twitter.com/" target="_blank"><img src="./img/contacto_twitter.png" alt=""></a>
+                </div>
+          </div>
+        </section>
       </main>
 
       <!--footer-->

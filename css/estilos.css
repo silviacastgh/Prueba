@@ -143,8 +143,9 @@ a:hover, .dropdown:hover .dropbtn {
     color: #f9f2d6;
     font-size: 75px;
     text-shadow: 1px 1px 2px black;
-    padding: 240px 0 0 10px;
+    padding: 210px 0 0 10px;
     text-align: left;
+ 
 }
 
 #index{
@@ -168,6 +169,9 @@ a:hover, .dropdown:hover .dropbtn {
     justify-content: center;
 }
 
+#historia{
+    margin: 30px 0;
+}
 .contenedor_historia{
     line-height: 2em;
     text-align: justify;
@@ -175,9 +179,14 @@ a:hover, .dropdown:hover .dropbtn {
     padding: 10px;
 }
 
-.contenedor_historia img{
+.contenedor_historia p{
+    margin-bottom: 20px;
+}
+
+.contenedor_historia iframe{
     border-radius: 10px;
     width: 100%;
+    height: 500px;
 }
 
 
@@ -214,11 +223,102 @@ a:hover, .dropdown:hover .dropbtn {
 
 /*--------------------------------------------------*/
 /*main del contacto*/
-#contacto{
+#banner_contacto{
     background-image: url("/img/gatito2.jpg");
     background-size: cover;
     background-position: center;
 }
+
+.contacto{
+    width: 50%;
+    height: 830px;
+}
+
+.contacto iframe{
+    width: 100%;
+    padding: 25px;
+}
+
+.contacto h3{
+    font-size: 35px;
+    line-height: 44px;
+    font-weight: 300;
+    padding: 25px;
+}
+
+.contacto_redes{
+    margin-left: 15px;
+}
+
+.contacto_formulario{
+    color:black;
+    padding: 0 20px 20px 20px;
+}
+
+.contacto_input{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.contacto_input input, .contacto_input textarea, .contacto_input select{
+    width: 90%;
+    height: 100%;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    padding: 10px 20px 10px;
+    font-size: 16px;
+    margin-top: 15px;
+    color:black;
+
+}
+
+.boton.contacto_boton{
+    border: 0.5px solid black;
+    margin-top: 10px;
+    width: 90%;
+}
+
+/*--------------------------------------------------*/
+/*main de adopción*/
+
+
+
+
+
+/*--------------------------------------------------*/
+/*main del conocelos*/
+.contenedor_tarjeta{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around ;
+}
+
+.tarjeta{
+    width: 300px;
+    border: 1px solid black;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.tarjeta_imagen{
+    width: 100%;
+}
+
+.tarjeta_imagen img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.tarjeta_cuerpo{
+    width: 100%;
+    height: 50%;
+    margin-left: 10px;
+}
+  
+
 
 /*--------------------------------------------------*/
 /*main del login, recuperacion y registración*/
@@ -235,7 +335,7 @@ a:hover, .dropdown:hover .dropbtn {
 }
 
 .wrapper{
-    margin: 50px 0 50px 0;
+    margin: 70px 0 50px 0;
     width: 500px;
     background-color: transparent;
     border: 2px solir rgba(255, 255, 255, .2);
@@ -244,6 +344,13 @@ a:hover, .dropdown:hover .dropbtn {
     color: #f9f2d6;
     border-radius: 10px;
     padding: 30px;
+}
+.wrapper p{
+    margin: 20px 0;
+}
+
+.wrapper h1{
+    margin: 10px 0;
 }
 
 .icono{
@@ -275,7 +382,7 @@ a:hover, .dropdown:hover .dropbtn {
     position: relative;
     width: 100%;
     height: 50px;
-    margin: 30px 0;
+    margin: 0 0 30px;
 }
 
 .input_box input{
@@ -324,7 +431,7 @@ a:hover, .dropdown:hover .dropbtn {
     display: flex;
     justify-content: space-between;
     font-size: 14px;
-    margin: -15px 0 15px;
+    margin: 5px 5px 15px;
 }
 
 .remember_forgot label input{
@@ -358,6 +465,27 @@ a:hover, .dropdown:hover .dropbtn {
     position: absolute;
     top: -5%;
     left: 40%;   
+}
+
+.validar{
+    margin: 0 0 8px;
+    color: red;
+    font-weight: bold;
+    font-size: small;
+    text-align: justify;
+}
+
+.validar i{
+    color: #f9f2d6;
+}
+
+.avatar{
+    margin: 10px 0;
+}
+.avatar img{
+    border-radius: 50%;
+    width: 35%;
+    margin-left: 30%;
 }
 
 
@@ -455,6 +583,7 @@ a:hover, .dropdown:hover .dropbtn {
 }
 
 /*--------------------------------------------------*/
+
 /*--------------------------------------------------*/
 /*main donacion*/
 body .donacion{
@@ -518,20 +647,21 @@ div .a{
 }
 
 
-
-
-
 .elemento-divider{
     padding-top: 2px;
     padding-bottom: 2px;
 }
 
 
+/*--------------------------------------------------*/
 /*responsive*/
 
 @media screen and (max-width: 1200px) {    
     .wrapper{
         width: 40%;
+    }
+    .banner h2{
+        font-size: 70px;
     }
 }
 
@@ -539,10 +669,17 @@ div .a{
     .wrapper{
         width: 50%;
     }
+    .banner h2{
+        font-size: 60px;
+    }
+
 }
 
 @media screen and (max-width: 850px) {     
-    
+    .banner h2{
+        font-size: 45px;
+    }
+
     .header_icono{
         width: 90px;
         height: 90px;
@@ -563,6 +700,10 @@ div .a{
 
     .novedades{
         width: 90%;
+    }
+
+    .contacto{
+        width: 100%;
     }
 }
 

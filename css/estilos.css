@@ -354,6 +354,7 @@ a:hover, .dropdown:hover .dropbtn {
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
+    border-color: rgb(123 132 141);
 }
 
 .container_conocelos button{

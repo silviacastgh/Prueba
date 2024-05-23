@@ -648,27 +648,37 @@ a:hover, .dropdown:hover .dropbtn {
     margin: 80px;
 }
 
-
 .requisitos_item ul{
-    margin: 80px;
+    margin: 50px;
 }
 
-.requisitos_item li{
+.requisitos_item ul li{
+    margin: 10px;
+    list-style-image: url("../img/favicon-32x32.png");
     text-align: justify;
     line-height: 40px;
     font-size: 16px;
 }
 
+
+
+
+
 .requisitos_boton{
     width: 500px;
     height: 50px;
-    background-color: #f65577;
+    background-color: #fa7592;
     border-radius: 40px;
     cursor: pointer;
     font-size: 16px;
     font-weight: 600;
-    padding: 30px;
+    padding: 25px;
 }
+
+.requisitos_item a:hoover{
+    color:#f9f2d6;
+}
+
 
 /*--------------------------------------------------*/
 /*main donacion*/

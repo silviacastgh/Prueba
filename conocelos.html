@@ -4,80 +4,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    
+    <!--tipografia-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <!--
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/estiloa.css">
-  <!--  <style>
-        .container{
-            display:flex;
-            flex-wrap:wrap;
-            justify-content:space-evenly
-        }
-        .tarjeta{
-            width: 200px;
-            border: 1px solid black;
-            border-radius: 10px;
-            margin-top: 10px;
-        }
-        .tarjeta img{
-            width: 100%;
-        }
-        .cuerpo{
-            padding: 10px;
-        }
-    </style> -->
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    -->
+    <link rel="shortcut icon" href="./img/favicon-32x32.png" type="image/x-icon"> <!--favicon-->
+    <link rel="stylesheet" href="./css/estilos.css"> <!--hoja de estilos-->
+   
+
+
+    <title>Conocelos</title>
+
+
 </head>
 <body>
-    <!--  <header>
-        <h1>Consumo Api con Json propio </h1>
-    </header> -->
-    <div id="app">
-       <!-- <p>{{datos}}</p> -->
-        <div class="container">
-            <nav>
-                <span id="navizquierdo">
-                    <a href="index.html">
-                        Volver_home
-                    </a>
-                </span>
-           </nav>
-            <h3>Mascotas</h3>Filtro
-            <label for="">Edad menor a :</label>
-            <input v-model="edad" type="number" id="edad">         
-                                                        
-            <label>Tipo:</label>
-            <select v-model="tipo" name="tipo" >
-                 <option  id="tipo"  selected >All</option>
-                 <option  id="tipo" v-for="tipo of tipos">{{tipo}}</option>
-            </select>
+    <section class="container">
+        <header class="item header">
+            <!-- en script.js -->
+        </header>
 
-            <label>Genero:</label>
-            <select v-model="genero" name="genero" id="">
-                <option  id="genero"  selected >All</option>
-                <option id="genero" v-for="genero of generos"> {{genero}}</option>
-            </select> 
 
-            <button class="btn btn-primary" v-on:click="filtro() ">Buscar</button>
-            
-            <button class="btn btn-primary" @click="orden()">Orden Ascendente</button> 
-            <br>
-          
-           
-            <div class="container d-flex flex-row flex-wrap justify-content-around ">
-            <div v-for="elemento in datos" class="tarjeta">
-                <div class="cuerpo">
-                    <img width="card-img-top" :src="elemento.imagen" :alt="elemento.nombre">
-               <!--       <p>id: {{elemento.id}}</p> -->
-                    <p>Nombre: {{elemento.nombre}}</p>
-                    <p>Edad: {{elemento.edad}}</p>
-                    <p>Edad: {{elemento.genero}}</p>
-                </div>
+        <!--main-->
+        <main class="contenido">
+            <!--seccion del banner-->
+            <section class="banner" id="index">
+             <h2>CONOCELOS</h2>
+            </section>
+
+            <div id="app_conocelos">
+                <!--Consumo Api con Json propio-->
+                <!-- <p>{{datos}}</p> -->
+
+                <div class="container_conocelos">
+                    <!--
+                    <nav>
+                        <span id="navizquierdo">
+                            <a href="index.html">
+                                Volver_home
+                            </a>
+                        </span>
+                     </nav>
+                     <h3>Mascotas</h3>Filtro
+                     -->
+                    <label for="">Edad menor a :</label>
+                    <input v-model="edad" type="number" id="edad">         
+                                                                
+                    <label>Tipo:</label>
+                    <select v-model="tipo" name="tipo" >
+                        <option  id="tipo"  selected >All</option>
+                        <option  id="tipo" v-for="tipo of tipos">{{tipo}}</option>
+                    </select>
+
+                    <label>Genero:</label>
+                    <select v-model="genero" name="genero" id="">
+                        <option  id="genero"  selected >All</option>
+                        <option id="genero" v-for="genero of generos"> {{genero}}</option>
+                    </select> 
+
+                    <button class="btn btn-primary" v-on:click="filtro() ">Buscar</button>
+                    
+                    <button class="btn btn-primary" @click="orden()">Orden Ascendente</button> 
+                    <br>
+                
+                    <div  class="tarjeta">
+                        <div v-for="elemento in datos">
+                            <div class="cuerpo">
+                                <img :src="elemento.imagen" :alt="elemento.nombre">
+                                <p>Nombre: {{elemento.nombre}}</p>
+                                <p>Edad: {{elemento.edad}}</p>
+                                <p>Edad: {{elemento.genero}}</p>
+                            </div>
+                        </div>
+                 </div>
             </div>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+        </main>    
+        
+        <!--footer-->
+         <footer class="item footer">
+          <!-- en script.js -->
+         </footer> 
+    </section>
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>-->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./js/pg.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>

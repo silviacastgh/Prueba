@@ -639,6 +639,36 @@ a:hover, .dropdown:hover .dropbtn {
 }
 
 /*--------------------------------------------------*/
+/*rquisitos*/
+.requisitos{
+    text-align: center;
+}
+
+.requisitos_item{
+    margin: 80px;
+}
+
+
+.requisitos_item ul{
+    margin: 80px;
+}
+
+.requisitos_item li{
+    text-align: justify;
+    line-height: 40px;
+    font-size: 16px;
+}
+
+.requisitos_boton{
+    width: 500px;
+    height: 50px;
+    background-color: #f65577;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 30px;
+}
 
 /*--------------------------------------------------*/
 /*main donacion*/
@@ -719,6 +749,7 @@ div .a{
     .banner h2{
         font-size: 70px;
     }
+
 }
 
 @media screen and (max-width: 1024px) {    

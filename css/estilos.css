@@ -700,7 +700,7 @@ body .donacion{
     background-image: url("../img/banner2.jpg");
     background-size: cover;
     background-position: center;
-    box-shadow: inset 0 0 0 2000px rgb(47 45 45 / 0.5);
+    box-shadow: inset 0 0 0 2000px rgb(47 45 45 / 0.2);
     width: 100%;
     height: 350px;
     padding-bottom: 10px;
@@ -735,7 +735,13 @@ body .donacion{
  #pdonacion{
     text-align: justify;
  }
-
+ .linkDonar{
+    /*display: inline-block;*/
+    color: #20201e;
+    text-align: center;
+    padding: 10px 16px 0px 16px;
+    text-decoration: none;
+}
  
 /*--------css tarjeta mercado pago---------*/
 

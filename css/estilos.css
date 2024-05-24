@@ -714,7 +714,7 @@ body .donacion{
   align-content: space-around;
 }
 .contenedorTarjeta{
-    background-color: #f9f2d6;
+    background-color: #faf5f9;
     color: #000;
     box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
     margin: 20px 2px ;
@@ -725,14 +725,18 @@ body .donacion{
     padding: 50px 50px;
     width: 50 px;
     border-radius: 10%;
+    line-height: 2em;
 }
 
 .contenedorTarjeta:hover{
     box-shadow: 5px 5px 20 px rgba(0, 0, 0, .4);
     transform: translateY(-3%);
 }
+ #pdonacion{
+    text-align: justify;
+ }
 
-
+ 
 /*--------css tarjeta mercado pago---------*/
 
 div .a{
@@ -745,7 +749,7 @@ div .a{
     
     
     width: 40%;
-    box-shadow: 0 0 12px 15px rgba(0, 0, 0, .4);
+    box-shadow: 0 0 12px 15px rgba(0, 0, 0, .1);
     text-align: center;
 
 }

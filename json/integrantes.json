@@ -1,0 +1,23 @@
+
+[
+    {
+        "id": 1,
+        "nombre": "Rocio Villarreal",
+        "img": "./img/foto Ro.jpg",
+        "url": "#"
+
+    },
+    {
+        "id": 2,
+        "nombre": "Silvia Castillo",
+        "img": "./img/silvia_castillo.jpg",
+        "url": "https://www.linkedin.com/in/silvia-castillo-19060831/"
+
+    },
+    {
+        "id": 3,
+        "nombre": "Sofia Goszko",
+        "img": "./img/sofia_goszko.jpeg",
+        "url": "https://www.linkedin.com/in/sofia-lara-goszko/"
+    }
+]

@@ -27,65 +27,71 @@
                 <!--avatar-->
                 <div class="avatar">
                     <img id="avatarPreview" src="./img/no-avatar.png" alt="Avatar">
-                    <input type="file" id="imagenPerfil" name="imagenPerfil" accept="image/*"required="true">
-                    <div id="validar_imagen" class="validar">&nbsp;</div>
+                    <input type="file" id="imagenPerfil" name="imagenPerfil" accept="image/*">
                 </div>
+                <div id="validar_imagen" class="validar">&nbsp; </div>
 
 
                 <!--nombre-->
-                <div class="input_box">
-                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" required="true">
+                <div class="input_box validar">
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre">
                     <i class='bx bxs-user'></i>
                 </div>
+                <div id="validar_nombre" class="validar">&nbsp;    </div>
 
                 <!--apellido-->
-                <div class="input_box">
-                    <input type="text" name="apellido" id="apellido" placeholder="Apellido" required="true">
+                <div class="input_box validar">
+                    <input type="text" name="apellido" id="apellido" placeholder="Apellido">
                     <i class='bx bxs-user'></i>
                 </div>
+                <div id="validar_apellido" class="validar">&nbsp;    </div>
 
                 <!--email-->
                 <div class="input_box">
-                    <input type="email" name="email" id="email" placeholder="E-mail" required="true">
+                    <input type="email" name="email" id="email" placeholder="E-mail">
                     <i class='bx bxs-envelope'></i>
                     <div id="validar_email" class="validar">&nbsp;    </div>
                 </div>    
                 
                 <!--telefono-->
-                <div class="validar input_box">
-                    <input type="tel" name="telefono" id="telefono" placeholder="Teléfono" required="true">
+                <div class="input_box validar">
+                    <input type="tel" name="telefono" id="telefono" placeholder="Teléfono">
                     <i class='bx bxs-phone'></i>
                 </div>
                 <div id="validar_telefono" class="validar">&nbsp;    </div>
 
                 <!--fecha de nacimiento-->
-                <div class="input_box">
-                    <input type="text" name="fechaNac" id="fechaNac" placeholder="Fecha de nacimiento" onfocus="(this.type='date')" onblur="(this.type='text')" required="true">
+                <div class="input_box validar">
+                    <input type="text" name="fechaNac" id="fechaNac" placeholder="Fecha de nacimiento" onfocus="(this.type='date')" onblur="(this.type='text')">
                     <i class='bx bxs-calendar'></i>
                 </div>
+                <div id="validar_fecha" class="validar">&nbsp;    </div>
 
                 <!--genero-->
-                <div class="input_box">
-                    <select name="genero" id="geneto" required="true">
+                <div class="input_box validar">
+                    <select name="genero" id="genero">
                         <option value="">Seleccione su género</option>
-                        <option value="">Mujer cis</option>
-                        <option value="">Mujer trans</option>
-                        <option value="">Hombre cis</option>
-                        <option value="">Hombre trans</option>
-                        <option value="">No binario</option>
-                        <option value="">Otro</option>
-                        <option value="">Prefiero no decirlo</option>
+                        <option value="mujerCis">Mujer cis</option>
+                        <option value="mujerTans">Mujer trans</option>
+                        <option value="hombreCis">Hombre cis</option>
+                        <option value="hombreTans">Hombre trans</option>
+                        <option value="noBinario">No binario</option>
+                        <option value="otro">Otro</option>
+                        <option value="prefieroNoDecirlo">Prefiero no decirlo</option>
                     </select>
                 </div>
+                <div id="validar_genero" class="validar">&nbsp;    </div>
 
                 <!--usuario-->
-                <div class="input_box">
-                    <input type="text" name="usernameReg" id="usernameReg" placeholder="Username" required="true">
+                <div class="input_box validar">
+                    <input type="text" name="usernameReg" id="usernameReg" placeholder="Username">
                     <i class='bx bxs-user'></i>
                 </div>
+                <div id="validar_usuario" class="validar">&nbsp;    </div>
+
                 <!--contraseña-->
                 <div class="input_box validar">
-                    <input type="password" name="passwordReg" id="passwordReg" placeholder="Password" required="true">
+                    <input type="password" name="passwordReg" id="passwordReg" placeholder="Password">
                     <i class='bx bxs-lock-alt' ></i>
                    
                 </div>
@@ -93,15 +99,16 @@
                 
                 <!--repetir contraseña-->
                 <div class="input_box validar">
-                    <input type="password" name="repPassword" id="repPassword" placeholder="Repedir password" required="true">
+                    <input type="password" name="repPassword" id="repPassword" placeholder="Repedir password">
                     <i class='bx bxs-lock-alt' ></i> 
                 </div>
                 <div id="validar_rep_password" class="validar">&nbsp;    </div>
 
                 <!--check del recuerdame y enlace para recuperar contraseña-->
-                <div class="remember_forgot">
-                    <label><input type="checkbox" name="terminos" id="terminos" required="true"><a href="#">Acepto términos y condiciones</a></label>
+                <div class="remember_forgot validar">
+                    <label><input type="checkbox" name="terminos" id="terminos"><a href="#">Acepto términos y condiciones</a></label>
                 </div>
+                <div id="validar_terminos" class="validar">&nbsp;    </div>
 
                 <button type="submit" class="boton">Enviar</button> <!--boton para enviar el formulario-->
             

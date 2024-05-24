@@ -28,7 +28,6 @@ if(document.querySelector("header")){
                     <a href="#">DONACIONES DE INSUMOS</a>
                     </div>
                 </li>
-                <li><a href="./tienda.html">PET SHOP</a></li>
                 <li><a href="./contacto.html">CONTACTO</a></li>
                 <li><a href="./login.html">INGRESAR</a></li>
             </ul>     
@@ -59,7 +58,6 @@ if(document.querySelector("footer")){
             <a href="./index.html">INICIO</a>
             <a href="./adopcion.html">ADOPCIÓN</a>
             <a href="./donacion.html">DONAR</a>
-            <a href="./tienda.html">PET SHOP</a></li>
             <a href="./contacto.html">CONTACTO</a></li>
             <a href="./login.html">INGRESAR</a></li>              
         </nav>
@@ -86,101 +84,7 @@ if(document.querySelector("footer")){
 
 
 //---------------------------------------------------------
-//conocelos
 
-if(document.querySelector(".contenedor_tarjeta")){
-
-    //json de gatos
-    let animales = [        
-        {
-            id: 1,
-            nombre: "Rick",
-            estado: "castrado",
-            edad: "3",
-            genero: "Male",
-            imagen: "https://cdn2.thecatapi.com/images/9vt.jpg",
-            creado: "2017-11-04T18:48:46.250Z"
-        },
-        {
-            id: 2,
-            nombre: "Mory",
-            estado: "sin castrar",
-            edad: "4",
-            genero: "Male",
-            imagen: "https://cdn2.thecatapi.com/images/au5.jpg",
-            creado: "2017-11-04T18:50:21.651Z"
-        },
-        {
-            id: 3,
-            nombre: "Summer",
-            estado: "castrado",
-            edad: "2",
-            genero: "Female",
-            imagen: "https://cdn2.thecatapi.com/images/b7d.jpg",
-            creado: "2017-11-04T19:09:56.428Z"
-        },
-        {
-            id: 4,
-            nombre: "Beth",
-            estado: "castrado",
-            edad: "5",
-            genero: "Female",
-            imagen: "https://cdn2.thecatapi.com/images/cdi.jpg",
-            creado: "2017-11-04T19:22:43.665Z"
-        },
-        {
-            id: 5,
-            nombre: "Jerry",
-            estado: "castrado",
-            edad: "7",
-            genero: "Male",
-            imagen: "https://cdn2.thecatapi.com/images/dte.jpg",
-            creado: "2017-11-04T19:26:56.301Z"
-        },
-        {
-            id: 6,
-            nombre: "Jenny",
-            estado: "castrado",
-            edad: "4",
-            genero: "Female",
-            imagen: "https://cdn2.thecatapi.com/images/MTc5OTc4Ng.jpg",
-            creado: "2017-11-04T19:26:56.301Z"
-        },
-        {
-        id: 7,
-        nombre: "Jerry",
-        estado: "castrado",
-        edad: "2",
-        genero: "Male",
-        imagen: "https://cdn2.thecatapi.com/images/yqcbOxkWK.jpg",
-        creado: "2017-11-04T19:26:56.301Z"
-    }
-    ];
-
-    //variable que contendrá las tarjetas
-    let cad = ``;
-
-    //recorro el arreglo de animales y creo las tarjetas
-    for (let animal of animales) {
-    cad = cad + `
-        <div class="tarjeta">
-            <div class="tarjeta_imagen">      
-                <img src="${animal.imagen}" alt="${animal.nombre}">
-            </div>
-            <div class="tarjeta_cuerpo">
-                <p>Nombre: ${animal.nombre}</p>
-                <p>Estado: ${animal.estado}</p>
-                <p>Edad:${animal.edad}</p>
-                <p>Genero:${animal.genero}</p>
-            </div>
-        </div>
-        
-        `
-    }
-
-    document.querySelector(".contenedor_tarjeta").innerHTML=cad;
-
-}
 //---------------------------------------------------------
 //registracion
 if(document.querySelector(".registracion")){
@@ -188,24 +92,36 @@ if(document.querySelector(".registracion")){
     // Previsualizacion de imagen
     let avatar = document.getElementById("imagenPerfil");
     let imagen = document.getElementById("avatarPreview");
+ 
+
     avatar.addEventListener("change", e => {
         console.log(e);
         if(e.target.files[0]){
             let reader = new FileReader();
             reader.onload = function(e){
                 imagen.src=e.target.result;
+            }
+            reader.readAsDataURL(e.target.files[0]);
+
         }
-        reader.readAsDataURL(e.target.files[0]);
-    }
+
     });
 
     function validar_registracion(){
         //me traigo los valores del html
+        let imagen = document.getElementById("imagenPerfil");
+        let nombre = document.getElementById("nombre");
+        let apellido = document.getElementById("apellido")
         let email = document.getElementById("email");
         let telefono = document.getElementById("telefono");
+        let fecha = document.getElementById("fechaNac");
+        let genero = document.getElementById("genero");
+        let genero_seleccionado = genero.options[genero.selectedIndex].value;
+        let usuario = document.getElementById("usernameReg");
         let password = document.getElementById("passwordReg");
         let repPassword = document.getElementById("repPassword");
-        avatar.addEventListener("change", e => {console.log(e)});
+        let terminos = document.getElementById("terminos");
+
         let error = false;
 
         //expreciones regulares
@@ -213,12 +129,36 @@ if(document.querySelector(".registracion")){
         let passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
         let telefonoRegex = /^\d{10}$/;
 
+        //imagen
+        if(imagen.files.length === 0){
+            document.getElementById("validar_imagen").innerHTML="Seleccione una imagen";
+            error = true;
+        }else{
+            document.getElementById("validar_imagen").innerHTML="";
+        }
+
+
+        //nombre
+        if(nombre.value.trim() == 0){
+            document.getElementById("validar_nombre").innerHTML = "Complete su nombre";
+            error = true; // Evitar que el formulario se envíe si la validación falla
+        }else{
+            document.getElementById("validar_nombre").innerHTML="";
+        }
+
+        //apellido
+        if(apellido.value.trim() == 0){
+            document.getElementById("validar_apellido").innerHTML = "Complete su apellido";
+            error = true; // Evitar que el formulario se envíe si la validación falla
+        }else{
+            document.getElementById("validar_apellido").innerHTML="";
+        }
+        
+
         //email
         if(!emailRegex.test(email.value)){
             document.getElementById("validar_email").innerHTML = "Formato de mail incorrecto";
-            validar_mail.innerHTML = "Por favor, introduce un correo electrónico válido.";
             error = true; // Evitar que el formulario se envíe si la validación falla
-            email.focus();
         }else{
             document.getElementById("validar_email").innerHTML="";
         }
@@ -227,17 +167,38 @@ if(document.querySelector(".registracion")){
         if(!telefonoRegex.test(telefono.value)) {
             document.getElementById("validar_telefono").innerHTML = "Código de área + celular [sin 15, sin espacios y sin caracteres especiales]";
             error = true;
-            password.focus();
         }else{
             document.getElementById("validar_telefono").innerHTML ="";
         }
 
+        //fecha de nacimiento
+        if(fecha.value === ""){
+            document.getElementById("validar_fecha").innerHTML = "Seleccione su fecha de nacimiento";
+            error = true; // Evitar que el formulario se envíe si la validación falla
+        }else{
+            document.getElementById("validar_fecha").innerHTML="";
+        }
+
+        //genero
+        if(genero_seleccionado === ""){
+            document.getElementById("validar_genero").innerHTML = "Seleccione una opción";
+            error = true;
+        }else{
+            document.getElementById("validar_genero").innerHTML ="";
+        }
+
+        //usuario
+        if(usuario.value.trim() == 0){
+            document.getElementById("validar_usuario").innerHTML = "Complete el usuario";
+            error = true; // Evitar que el formulario se envíe si la validación falla
+        }else{
+            document.getElementById("validar_usuario").innerHTML="";
+        }
 
         //contraseña
         if(password.value.length < 8 || !passwordRegex.test(password.value)) {
             document.getElementById("validar_password").innerHTML = "La clave debe contener al menos ocho caracteres, una mayúscula, una minúscula, un número y un carácter especial";
             error = true;
-            password.focus();
         }else{
             document.getElementById("validar_password").innerHTML ="";
         }
@@ -246,19 +207,20 @@ if(document.querySelector(".registracion")){
         if(repPassword.value != password.value){
             document.getElementById("validar_rep_password").innerHTML = "Las claves no coinciden";
             error = true;
-            repPassword.focus();
         }else{
             document.getElementById("validar_rep_password").innerHTML = "";
         }
 
+        //terminos y condiciones
+        if(terminos.checked === false){
+            document.getElementById("validar_terminos").innerHTML = "Por favor acepte los términos y condiciones";
+            error = true;
+        }else{
+            document.getElementById("validar_terminos").innerHTML = "";
+        }
+
 
         if (error == false) {
-            /*
-            document.getElementById("usuario").value = ""
-            document.getElementById("validar_usuario").innerHTML = "&nbsp;";
-            document.getElementById("clave").value = ""
-            document.getElementById("validar_clave").innerHTML = "&nbsp;";
-            return error;*/
             alert("Gracias por registrarte!");
             window.location.href = "./index.html";
             return error;
@@ -274,14 +236,33 @@ if(document.querySelector(".login")){
     function validar_ingreso(){
         let usuario = document.getElementById("username").value;
         let password = document.getElementById("password").value;
+        let error = false;
 
-        //si alguno de los valores es vacio
-        if(usuario.trim() == 0 || password.trim() == 0){
-            return false;
+        //usuario
+        if(usuario.trim() == 0 ){
+            document.getElementById("validar_login_usuario").innerHTML = "Ingrese el usuario";
+            error = true;
+        }else{
+            document.getElementById("validar_login_usuario").innerHTML = "";
         }
 
-        window.location.href = "./index.html";
-        alert("Bienvenido!");
+        //contraseña
+        if(password.trim() == 0 ){
+            document.getElementById("validar_login_password").innerHTML = "Ingrese la contraseña";
+            error = true;
+        }else{
+            document.getElementById("validar_login_password").innerHTML = "";
+        }
+
+        if (error == false) {
+            sessionStorage.setItem("usuario", usuario);
+            sessionStorage.setItem("password", password);
+            alert("Bienvenido!");
+            window.location.href = "./index.html";
+            return error;
+            
+        }
+        return !error;
         //false;
     }
 }
@@ -292,16 +273,84 @@ if(document.querySelector(".login")){
 if(document.querySelector(".recuperacion")){
     function validar_recuperacion(){
         let dato = document.getElementById("recuperacion").value;
+        let error = false;
 
         //si no se envio nada
         if(dato.trim() == 0){
-            return false;
+            document.getElementById("validar_recuperacion").innerHTML = "Ingrese correro, teléfono o usuario";
+            error = true;
+        }else{
+            document.getElementById("validar_recuperacion").innerHTML = "";
         }
 
-        window.location.href = "./index.html";
-        alert("Se envió enlace de recuperación");
+        if (error == false) {
+            alert("Se envió enlace de recuperación");
+            window.location.href = "./index.html";
+            return error;        
+        }
+        return !error;
     }
 }
+
+
+//---------------------------------------------------------
+//contacto
+if(document.querySelector(".contacto_formulario")){
+    function validar_contacto(){
+        //valores de html
+        let nombre_apellido = document.getElementById("nombre_apellido").value;
+        let mensaje = document.getElementById("mensaje").value;
+        let email = document.getElementById("email_contacto").value;
+        let area = document.getElementById("area_contacto");
+        let area_seleccionada = area.options[area.selectedIndex].value;
+
+        error = false;
+
+        //expreciones regulares
+        let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        //nombre
+        if(nombre_apellido.trim() == 0){
+            document.getElementById("validar_nombre_apellido").innerHTML = "Complete su nombre";
+            error = true; // Evitar que el formulario se envíe si la validación falla
+        }else{
+            document.getElementById("validar_nombre_apellido").innerHTML="";
+        }
+
+       //email
+        if(!emailRegex.test(email)){
+            document.getElementById("validar_email_contacto").innerHTML = "Ingrese un mail con formato correcto";
+            error = true; // Evitar que el formulario se envíe si la validación falla
+        }else{
+            document.getElementById("validar_email_contacto").innerHTML="";
+        }
+
+        //area
+        if(area_seleccionada === ""){
+            document.getElementById("validar_area").innerHTML = "Seleccione un área";
+            error = true;
+        }else{
+            document.getElementById("validar_area").innerHTML ="";
+        }
+
+        //si no se envio nada
+        if(mensaje.trim() == 0){
+            document.getElementById("validar_mensaje_contacto").innerHTML = "Ingrese mensaje a enviar";
+            error = true; // Evitar que el formulario se envíe si la validación falla
+        }else{
+            document.getElementById("validar_mensaje_contacto").innerHTML="";
+        }
+
+        if (error == false) {
+            alert("Gracias por tu consulta! Pronto te estaremos respondiendo");
+            window.location.href = "./index.html";
+            return error;        
+        }
+
+        return !error;
+    }
+}
+
 
 
 

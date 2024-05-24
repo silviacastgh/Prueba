@@ -21,7 +21,7 @@
     <main class="inicio">
         <section class="wrapper">
             <a href="./index.html"><img class="icono_recuperacion" src="./img/icono.png" alt=""></a> <!--enlace para volver al index-->
-            <form action="" class="recuperacion" onsubmit="validar_recuperacion()">
+            <form action="" class="recuperacion" onsubmit=" return validar_recuperacion()">
                 <div>
                 <h1>Recuperá tu cuenta</h1>
                 <p>
@@ -30,9 +30,10 @@
                 </div>
 
                 <!--dato a ingresar-->
-                <div class="input_box">
-                    <input type="text" name="recuperacion" id="recuperacion" placeholder="Correo, teléfono o usuario" required="true">
+                <div class="input_box validar">
+                    <input type="text" name="recuperacion" id="recuperacion" placeholder="Correo, teléfono o usuario">
                 </div>
+                <div id="validar_recuperacion" class="validar">&nbsp;    </div>
                 
                 <button type="submit" class="boton">Enviar</button> <!--boton para enviar el formulario-->
                 

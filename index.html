@@ -64,31 +64,27 @@
         </section>
 
         <!--integrantes del equipo-->
-        <section id="equipo">
-            <h2>INTEGRANTES</h2> 
+         <section id="equipo">
+          <div id="app">
+            <h2>INTEGRANTES</h2>
             <div class="contenedor">
-              <div class="integrante">
-                  <img src="./img/foto Ro.jpg" alt="Rocio Villarreal" title="Rocio Villareal">
-                  <a href="#" target="_blank">Rocio Villarreal</a>
-              </div>
-              <div class="integrante">
-                  <img src="./img/silvia_castillo.jpg" alt="Silvia Castillo" title="Silvia Castillo">
-                  <a href="#" target="_blank">Silvia Castillo</a>
-              </div>
-              <div class="integrante">
-                  <img src="./img/sofia_goszko.jpeg" alt="Sofia Goszko" title="Sofia Goszko">
-                  <a href="https://www.linkedin.com/in/sofia-lara-goszko/" target="_blank">Sofia Goszko</a>
+              <div class="integrante" v-for="elemento in datos">
+                  <img :src="elemento.img" :alt="elemento.nombre" :title="elemento.nombre">
+                  <a :href="elemento.url" target="_blank">{{elemento.nombre}}</a>
+               </div>
             </div>
           </div>
         </section>
+        
       </main>
 
       <!--footer-->
       <footer class="item footer">
         <!-- en script.js -->
-      </footer>
-    
+      </footer> 
     </section>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/integrantes.js"></script>  
     <script src="./js/script.js"></script>
 </body>
 </html>

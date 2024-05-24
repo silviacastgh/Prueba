@@ -21,13 +21,7 @@ if(document.querySelector("header")){
                     <a href="./adopcion.html">REQUISITOS DE ADOPCIÓN</a>
                 </div>
                 </li>
-                <li class="dropdown">
-                    <a href="./donacion.html" class="dropbtn">DONAR</a>
-                    <div class="dropdown-content">
-                    <a href="donacion.html">DONACIONES ECONÓMICAS</a>
-                    <a href="#">DONACIONES DE INSUMOS</a>
-                    </div>
-                </li>
+                <li><a href="./donacion.html">DONACIÓN</a></li>
                 <li><a href="./contacto.html">CONTACTO</a></li>
                 <li><a href="./login.html">INGRESAR</a></li>
             </ul>     
@@ -57,7 +51,7 @@ if(document.querySelector("footer")){
         <nav class="footer_nav">
             <a href="./index.html">INICIO</a>
             <a href="./adopcion.html">ADOPCIÓN</a>
-            <a href="./donacion.html">DONAR</a>
+            <a href="./donacion.html">DONACIÓN</a>
             <a href="./contacto.html">CONTACTO</a></li>
             <a href="./login.html">INGRESAR</a></li>              
         </nav>

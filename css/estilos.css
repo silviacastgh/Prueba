@@ -231,7 +231,7 @@ a:hover, .dropdown:hover .dropbtn {
 
 .contacto{
     width: 50%;
-    height: 830px;
+    height: 850px;
 }
 
 .contacto iframe{
@@ -679,7 +679,11 @@ a:hover, .dropdown:hover .dropbtn {
     color:#f9f2d6;
 }
 
-
+#adopcion{
+    background-image: url("../img/banner3.jpg");
+    background-size: cover;
+    background-position: center;
+}
 /*--------------------------------------------------*/
 /*main donacion*/
 body .donacion{

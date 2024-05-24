@@ -733,15 +733,17 @@ div .a{
     align-content: center;
 }
 
- .logomp{
+.logomp{
     
-    
-    width: 50%;;
+    width: 50%;
     box-shadow: 0 0 12px 15px rgba(0, 0, 0, .4);
     text-align: center;
 
 }
 
+#logoMp{
+    width: 25%;
+}
 
 .elemento-divider{
     padding-top: 2px;

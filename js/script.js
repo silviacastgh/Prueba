@@ -255,6 +255,8 @@ if(document.querySelector(".login")){
         }
 
         if (error == false) {
+            sessionStorage.setItem("usuario", usuario);
+            sessionStorage.setItem("password", password);
             alert("Bienvenido!");
             window.location.href = "./index.html";
             return error;

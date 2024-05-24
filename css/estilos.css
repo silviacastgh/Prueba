@@ -331,7 +331,7 @@ a:hover, .dropdown:hover .dropbtn {
 
 .cuerpo{
     width: 300px;
-    border: 1px solid black;
+    border: 1px solid rgb(123 132 141);
     margin-top: 10px;
     border-radius: 10px;
     margin: 15px
@@ -344,7 +344,7 @@ a:hover, .dropdown:hover .dropbtn {
 }
 
 .cuerpo p{
-    margin-top: 0;
+    margin-left: 5px;
     margin-bottom: 1rem;
 }
 
@@ -360,7 +360,7 @@ a:hover, .dropdown:hover .dropbtn {
 .container_conocelos button{
     padding: 9px;
     height: 45px;
-    background-color: #0d6efd;
+    background-color: #fa7592;
     border: none;
     border-radius: 5px;
     cursor: pointer;

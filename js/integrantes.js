@@ -13,17 +13,17 @@ createApp({
         .then(response => response.json())
         .then(
           data => {
-            console.log(data)
-            this.datos = data
+            console.log(data);
+            this.datos = data;
           }
         )
         .catch(error => {
-          console.log("Error:" + error)
-          this.error = true
+          console.log("Error:" + error);
+          this.error = true;
         });
     }
   },   
 created() {  // created() se ejecuta cada vez que se crea el objeto VUE
-  this.fetchData(this.url)
+  this.fetchData(this.url);
 }
-}).mount('#app')
+}).mount('#app');

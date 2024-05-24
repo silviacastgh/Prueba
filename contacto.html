@@ -38,24 +38,24 @@
           <!--formulario de contacto-->
           <div class="contacto">
             <h3>COMPLETA EL FORMULARIO</h3>
-            <form action="" class="contacto_formulario" onsubmit="return validar_contacto()">
+            <form class="contacto_formulario" onsubmit="return validar_contacto()">
               <!--nombre-->
               <div class="contacto_input">
-                  <label for="">Nombre y apellido</label>
+                  <label >Nombre y apellido</label>
                   <input type="text" name="nombre_apellido" id="nombre_apellido">
               </div>
               <div id="validar_nombre_apellido" class="validar">&nbsp; </div>
 
               <!--email-->
               <div class="contacto_input">
-                  <label for="">E-mail</label>
+                  <label >E-mail</label>
                   <input type="email" name="email_contacto" id="email_contacto" placeholder="">
               </div>    
               <div id="validar_email_contacto" class="validar">&nbsp; </div>
 
               <!--area de contacto-->
               <div class="contacto_input">
-                  <label for="">Área de contacto</label>
+                  <label >Área de contacto</label>
                   <select name="area_contacto" id="area_contacto">
                       <option value=""></option>
                       <option value="adopciones">Adopciones</option>
@@ -67,7 +67,7 @@
 
               <!--mensaje-->
               <div class="contacto_input">
-                <label for="">Mensaje</label>
+                <label>Mensaje</label>
                 <textarea name="mensaje" id="mensaje" rows="10"></textarea>
               </div>
               <div id="validar_mensaje_contacto" class="validar">&nbsp; </div>

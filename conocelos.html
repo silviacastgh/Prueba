@@ -56,19 +56,19 @@
                      </nav>
                      <h3>Mascotas</h3>Filtro
                      -->
-                    <label for="">Edad menor a :</label>
+                    <label >Edad menor a :</label>
                     <input v-model="edad" type="number" id="edad">         
                                                                 
                     <label>Tipo:</label>
                     <select v-model="tipo" name="tipo" >
-                        <option  id="tipo"  selected >All</option>
-                        <option  id="tipo" v-for="tipo of tipos">{{tipo}}</option>
+                        <option  class="tipo"  selected >All</option>
+                        <option  class="tipo" v-for="tipo of tipos">{{tipo}}</option>
                     </select>
 
                     <label>Genero:</label>
-                    <select v-model="genero" name="genero" id="">
-                        <option  id="genero"  selected >All</option>
-                        <option id="genero" v-for="genero of generos"> {{genero}}</option>
+                    <select v-model="genero" name="genero" >
+                        <option  class="genero"  selected >All</option>
+                        <option class="genero" v-for="genero of generos"> {{genero}}</option>
                     </select> 
 
                     <button class="btn btn-primary" v-on:click="filtro() ">Buscar</button>
@@ -88,6 +88,7 @@
                         </div>
                  </div>
             </div>
+        
         </main>    
         
         <!--footer-->

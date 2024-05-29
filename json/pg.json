@@ -1,0 +1,155 @@
+[
+      
+    {
+       "id": 1,
+       "nombre": "Rick",
+       "tipo": "gato",
+       "estado": "castrado",
+       "edad": "3",
+       "genero": "Macho",
+       "imagen": "https://cdn2.thecatapi.com/images/9vt.jpg"
+       
+    },
+    {
+        "id": 2,
+        "nombre": "Mory",
+        "tipo": "gato",
+        "estado": "sin castrar",
+        "edad": "4",
+        "genero": "Hembra",
+        "imagen": "https://cdn2.thecatapi.com/images/au5.jpg"
+       
+    },
+    {
+        "id": 3,
+        "nombre": "Summer",
+        "tipo": "gato",
+        "estado": "castrado",
+        "edad": "2",
+        "genero": "Macho",
+        "imagen": "https://cdn2.thecatapi.com/images/b7d.jpg"
+       
+    },
+    {
+        "id": 4,
+        "nombre": "Beth",
+        "tipo": "gato",
+        "estado": "castrado",
+        "edad": "5",
+        "genero": "Hembra",
+        "imagen": "https://cdn2.thecatapi.com/images/cdi.jpg"
+        
+    },
+    {
+        "id": 5,
+        "nombre": "Jerry",
+        "tipo": "gato",
+        "estado": "castrado",
+        "edad": "7",
+        "genero": "Macho",
+        "imagen": "https://cdn2.thecatapi.com/images/dte.jpg"
+        
+    },
+    {
+        "id": 6,
+        "nombre": "Jenny",
+        "tipo": "gato",
+        "estado": "castrado",
+        "edad": "4",
+        "genero": "Hembra",
+        "imagen": "https://cdn2.thecatapi.com/images/MTc5OTc4Ng.jpg"
+        
+    },
+    {
+      "id": 7,
+      "nombre": "Jerry",
+      "tipo": "gato",
+      "estado": "castrado",
+      "edad": "2",
+      "genero": "Macho",
+      "imagen": "https://cdn2.thecatapi.com/images/yqcbOxkWK.jpg"
+      
+  },
+  {
+    "id": 8,
+    "nombre": "Doggy1",
+    "tipo": "perro",
+    "estado": "Sin información",
+    "edad": "2",
+    "genero": "Macho",
+    "imagen": "https://http.dog/100.jpg"
+    
+  },
+  {
+    "id": 9,
+    "nombre": "Casius",
+    "tipo": "perro",
+    "estado": "Sin información",
+    "edad": "5",
+    "genero": "Macho",
+    "imagen": "https://http.dog/101.jpg"
+    
+  },
+  {
+    "id": 10,
+    "nombre": "Eli",
+    "tipo": "perro",
+    "estado": "Sin información",
+    "edad": "2",
+    "genero": "Hembra",
+    "imagen": "https://http.dog/102.jpg"
+    
+  },
+  {
+    "id": 11,
+    "nombre": "Calu",
+    "tipo": "perro",
+    "estado": "Sin información",
+    "edad": "2",
+    "genero": "Macho",
+    "imagen": "https://http.dog/103.jpg"
+    
+  },
+  {
+    "id": 12,
+    "nombre": "Dax",
+    "tipo": "perro",
+    "estado": "Sin información",
+    "edad": "3",
+    "genero": "Macho",
+    "imagen": "https://http.dog/200.jpg"
+    
+  },
+  {
+    "id": 13,
+    "nombre": "Poly",
+    "tipo": "perro",
+    "estado": "Sin información",
+    "edad": "2",
+    "genero": "Hembra",
+    "imagen": "https://http.dog/201.jpg"
+    
+  },
+  {
+    "id": 14,
+    "nombre": "Sol",
+    "tipo": "perro",
+    "estado": "Sin información",
+    "edad": "10",
+    "genero": "Hembra",
+    "imagen": "https://http.dog/206.jpg"
+    
+  },
+  {
+    "id": 15,
+    "nombre": "Tor",
+    "tipo": "perro",
+    "estado": "Sin información",
+    "edad": "5",
+    "genero": "Macho",
+    "imagen": "https://http.dog/404.jpg"
+   
+  }
+ 
+  ] 
+    

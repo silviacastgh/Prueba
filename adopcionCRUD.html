@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/estilos.css" />
+    <title>adopcionCRUD</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div id="app" class="container">
+        <h1>Crud adopción</h1>
+        <a href="adopcion_nuevo.html"class="boton_crud" class="">Nuevo</a>
+        <div class="">
+          <table class="">
+            <thead>
+              <tr>
+                <th scope="col">id</th>
+                <th scope="col">id_persona</th>
+                <th scope="col">id_pet</th>
+                <th scope="col">fecha adopcion</th>
+                <th scope="col">observacion</th>
+                <th scope="col">Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="" v-for="adopcion in adopciones">
+                <td scope="row">{{adopcion.id}}</td>
+                <td>{{adopcion.id_persona}}</td>
+                <td>{{adopcion.id_pet}}</td>
+                <td>{{adopcion.fechadop}}</td>
+                <td>{{adopcion.observacion}}</td>
+                <td>
+                  <a class="" :href="'adopcion_update.html?id='+ adopcion.id" >Editar</a>
+                  <button type="button" class="btn btn-danger" v-on:click="eliminar(adopcion.id)" >Eliminar</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><!--Link de VUE-->
+      <script src="./js/adopcionCRUD.js"></script>
+    </footer>
+  </body>
+</html>

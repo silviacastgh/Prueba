@@ -1,0 +1,74 @@
+<doctype html>
+    <html lang="en">
+    <head>
+      <title>Pet Editar</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="./css/estilos.css">
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!--boxicon-->
+
+  
+  
+    <!--tipografia-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header id="header">
+        <!-- place navbar here -->
+  </header>
+
+  <main class="inicio">
+    <section class="wrapper">
+      <a href="./index.html"><img class="icono" src="./img/icono.png" alt=""> </a>
+      <div class="" id="app">
+        <form class="login" onsubmit= "return validar_ingreso()">
+          <h1>Editar Pet </h1>
+            <div class="contacto_input">
+             <label for="id_pet">Id</label>
+             <input type="number" name="id_pet" id="id_pet" disabled v-model="id_pet" >
+           </div >
+           <div class="contacto_input">
+            <label for="foto">Foto</label>
+            <input type="text" name="foto" id="foto" v-model="foto">  
+            <img width="100"   :src="foto" alt="">
+          </div>
+          <div class="contacto_input" >
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" v-model="nombre">
+          </div>
+          <div class="contacto_input"class="mb-3">
+            <label for="precio">Edad</label>
+            <input type="number" name="edad" id="edad" v-model="edad">
+          </div>
+          <div class="contacto_input"class="mb-3">
+            <label for="genero">Genero</label>
+            <input type="text" name="genero" id="genero" v-model="genero">
+          </div>
+          <div class="contacto_input"class="mb-3">
+            <label for="especie">Especie</label>
+            <input type="text" name="especie" id="especie" v-model="especie">
+          </div>
+          <div class="contacto_input">
+            <label for="castrado">Castrado</label>
+            <input type="text" name="castrado" id="castrado" v-model="castrado">
+          </div>
+          
+          
+          <button type="button" class="boton" v-on:click="modificar()">Grabar</button>
+          </form>
+        </div>
+      </section>
+      </main>
+      <footer>
+        <!-- place footer here -->
+      </footer>
+      
+      <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+      <script src="./js/pet_update.js"></script>
+      <script src="./js/script.js"></script>
+  </body>
+</html>
+    

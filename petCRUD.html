@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>PetCRUD</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="shortcut icon" href="./img/favicon-32x32.png" type="image/x-icon"/>
+    
+</head>
+<body>
+    <header id="item header">
+        <!-- place navbar here -->
+    </header>
+    <main>
+        <div id="app" class="container">
+            <sectionsection class="banner" id="adopcion">
+            <h1>Pet CRUD</h1>
+            </section>
+            <br>
+            <a  class="boton_crud" href="pet_nuevo.html">Nuevo</a>
+            <br><br>
+            <!--<div v-if="error">
+                <p>Lo sentimos , ........</p>
+            </div>
+            <div v-else>
+                <section v-if="cargando">
+                    <div class="spinner-border"></div>
+                    <p>Cargando .....</p>
+                </section>
+                <section v-else>-->
+                    <section class="tabla">
+                      <div class="container_crud">
+                        <table class="">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Id Pet</th>
+                                    <th scope="col">Foto</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Edad</th>
+                                    <th scope="col">Genero</th>
+                                    <th scope="col">Especie</th>
+                                    <th scope="col">Castrado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class=""  v-for="pet in pets">
+                                    <td scope="row">{{pet.id_pet}}</td>
+                                    <td>
+                                        <img width="60"  :src="pet.foto" :alt="pet.nombre">
+                                    </td>
+                                    <td>{{pet.nombre}}</td>
+                                    <td>{{pet.edad}}</td>
+                                    <td>{{pet.genero}}</td>
+                                    <td>{{pet.especie}}</td>
+                                    <td>{{pet.castrado}}</td>
+                                    <td>
+                    			      <a class="btn btn-primary" :href="'pet_update.html?id='+ pet.id_pet" >Editar</a>
+                                      <button type="button" class="btn btn-danger" v-on:click="eliminar(pet.id_pet)" >Eliminar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                     </div>
+                   </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><!--Link de VUE-->
+    <script src="./js/petCRUD.js"></script>
+    <script src="./js/script_sinfooter.js"></script>
+</body>
+</html>

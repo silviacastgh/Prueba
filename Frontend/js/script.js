@@ -90,8 +90,7 @@ if(document.querySelector("footer")){
             <a href="./index.html">INICIO</a>
             <a href="./adopcion.html">ADOPCIÓN</a>
             <a href="./donacion.html">DONACIÓN</a>
-            <a href="./contacto.html">CONTACTO</a></li>
-            <a href="./login.html">INGRESAR</a></li>              
+            <a href="./contacto.html">CONTACTO</a></li>              
         </nav>
         </div>
         <div class="footer_item novedades">

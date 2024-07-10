@@ -4,79 +4,84 @@
       <title>Editar Persona</title>
       <meta charset="utf-8" />
       <meta name="viewport"content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-      <link rel="stylesheet" href="./css/estilos.css" />
+      <link rel="shortcut icon" href="./img/favicon-32x32.png" type="image/x-icon"> <!--favicon-->
+      <link rel="stylesheet" href="./css/estilos.css"> <!--hoja de estilos-->
+    
+    
+      <!--tipografia-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
     </head>
 
     <body>
-      <header id="header">
-        <!-- place navbar here -->
-      </header>
 
-      <main>
-        <div class="container" id="app">
-          <form style="background-color: aliceblue;margin: 10px auto;
-              width: 400px;padding: 20px;">
-            <h2>Editar Persona</h2>
-              <div class="">
-                  <label for="id_persona">Id</label>
-                  <input type="number" name="id_persona" id="id_persona" disabled v-model="id_persona"/>
-              </div>
-              <div class="">
-                  <label for="foto">foto</label>
-                  <input type="text" name="foto" id="foto" v-model="foto">
-                  <img width="100" :src="foto" alt="foto" />
-              </div>
-              <div class="">
-                <label for="nombre">Nombre</label>
-                 <input type="text" name="nombre" id="nombre" v-model="nombre" />
-              </div>
-              <div class="">
-                <label for="apellido">Apellido</label>
-                <input type="text" name="apellido" id="apellido" v-model="apellido"/>
-              </div>
+      <main class="inicio">
+        <section class="wrapper pet">
+          <a href="./index.html"><img class="icono" src="./img/icono.png" alt=""> </a>
+          <div id="app">
+            <form class="login">
+              <h1>Editar Persona</h1>
+                <div class="pet_input">
+                    <label for="id_persona">Id</label>
+                    <input type="number" name="id_persona" id="id_persona" disabled v-model="id_persona"/>
+                </div>
+                <div class="pet_input">
+                    <label for="foto">foto</label>
+                    <input type="text" name="foto" id="foto" v-model="foto">
+                    <img width="100" :src="foto" alt="foto" />
+                </div>
+                <div class="pet_input">
+                  <label for="nombre">Nombre</label>
+                  <input type="text" name="nombre" id="nombre" v-model="nombre" />
+                </div>
+                <div class="pet_input">
+                  <label for="apellido">Apellido</label>
+                  <input type="text" name="apellido" id="apellido" v-model="apellido"/>
+                </div>
 
-            <div class="">
-              <label for="mail">Mail</label>
-              <input type="text" name="mail" id="mail" v-model="mail" />
-            </div>
+                <div class="pet_input">
+                  <label for="mail">Mail</label>
+                  <input type="text" name="mail" id="mail" v-model="mail" />
+                </div>
 
-            <div class="">
-              <label for="fechanac">Fecha de Nacimiento</label>
-              <input type="date" name="fechanac" id="fechanac" v-model="fechanac"/>
-            </div>
-            <div class="">
-              <label for="movil">Movil</label>
-              <input type="text" name="movil" id="movil" v-model="movil" />
-            </div>
-            <div class="">
-              <label for="genero">Género</label>
-              <input type="text" name="genero" id="genero" v-model="genero" />
-            </div>
-            <div class="">
-              <label for="usuario">USUARIO</label>
-              <input type="text" name="usuario" id="usuario" v-model="usuario"/>
-            </div>
-            <div class="">
-              <label for="clave">CLAVE</label>
-              <input type="text" name="clave" id="clave" v-model="clave" />
-            </div>
-            <div class="">
-              <label for="rol">ROL</label>
-              <input type="text" name="rol" id="rol" v-model="rol" />
-            </div>
+                <div class="pet_input">
+                  <label for="fechanac">Fecha de Nacimiento</label>
+                  <input type="date" name="fechanac" id="fechanac" v-model="fechanac"/>
+                </div>
+                <div class="pet_input">
+                  <label for="movil">Movil</label>
+                  <input type="text" name="movil" id="movil" v-model="movil" />
+                </div>
+                <div class="pet_input">
+                  <label for="genero">Género</label>
+                  <input type="text" name="genero" id="genero" v-model="genero" />
+                </div>
+                <div class="pet_input">
+                  <label for="usuario">Usuario</label>
+                  <input type="text" name="usuario" id="usuario" v-model="usuario"/>
+                </div>
+                <div class="pet_input">
+                  <label for="clave">Clave</label>
+                  <input type="text" name="clave" id="clave" v-model="clave" />
+                </div>
+                <div class="pet_input">
+                  <label for="rol">Rol</label>
+                  <input type="text" name="rol" id="rol" v-model="rol" />
+                </div>
 
-            <button type="button" class="" v-on:click="modificar()">
-              Grabar
-            </button>
-          </form>
-          <p>{{data}}</p>
-          <p>{{persona}}</p>
-        </div>
-       
+                <button type="button" class="boton" v-on:click="modificar()">Grabar</button>
+            </form>
+            <p>{{data}}</p>
+            <p>{{persona}}</p>
+          </div>
+        </section>
       </main>
-      <footer>
-        <!-- place footer here -->
-      </footer>
+
       <!-- Bootstrap JavaScript Libraries 
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"> </script>

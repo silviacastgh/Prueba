@@ -45,6 +45,7 @@ const { createApp } = Vue
                 })
         },
         modificar() {
+            this.fetchData(this.url)
             let persona = {       
                 foto:this.foto,
                 nombre:this.nombre,

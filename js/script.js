@@ -38,7 +38,7 @@ if(document.querySelector("header")){
                     <a class="dropbtn" href="#" class="dropdownId">ADMINISTRACIÓN</a>
                     <div class="dropdown-content">
                         <a href="./petCRUD.html">ANIMALES</a>
-                        <a href="#">USUARIOS</a>
+                        <a href="./personasCRUD.html">USUARIOS</a>
                         <a href="#">ADOPCIONES</a>
                     </div>
                 </li>

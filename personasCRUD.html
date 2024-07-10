@@ -2,80 +2,97 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="shortcut icon" href="./img/favicon-32x32.png" type="image/x-icon"> <!--favicon-->
+    <link rel="stylesheet" href="./css/estilos.css"> <!--hoja de estilos-->
+  
+  
+    <!--tipografia-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+   
+
+
+
     <title>personasCRUD</title>
   </head>
 
   <body class=>
-    <header></header>
+    <section class="container">
+      <!--header-->
+      <header class="item header">
+        <!-- en script.js -->
+      </header>
 
-    <main>
-      <div id="app" class="container">
-        <h1 class="">Crud personas</h2>
-        <a href="persona_nuevo.html" class="boton_crud">Nuevo</a>
-        <!--
-        <div v-if="error">
-          <p>Lo sentimos , ........</p>
-        </div>
-        <div v-else>
-          <section v-if="cargando">
-            <div class="spinner-border"></div>
-            <p>Cargando .....</p>
-          </section>-->
-         <div>
-            <table class="" >
-              <thead>
-                <tr class="" >
-                  <th scope="col">id</th>
-                  <th scope="col">Foto</th>
-                  <th scope="col">nombre</th>
-                  <th scope="col">apellido</th>
-                  <th scope="col">mail</th>
-                  <th scope="col">fecha de nacimiento</th>
-                  <th scope="col">movil</th>
-                  <th scope="col">genero</th>
-                  <th scope="col">usuario</th>
-                  <th scope="col">clave</th>
-                  <th scope="col">rol</th>
-                  <th scope="col">Acciones</th>
-                </tr>
-              </thead>
-          
-              <tbody>
-                <tr class="" v-for="persona in personas">
-                  <td scope="row">{{persona.id_persona}}</td>
-                  <td>
-                    <img width="60" :src="persona.foto" :alt="persona.nombre">
-                  </td>
-                  <td>{{persona.nombre}}</td>
-                  <td>{{persona.apellido}}</td>
-                  <td>{{persona.mail}}</td>
-                  <td>{{persona.fechanac}}</td>
-                  <td>{{persona.movil}}</td>
-                  <td>{{persona.genero}}</td>
-                  <td>{{persona.usuario}}</td>
-                  <td>{{persona.clave}}</td>
-                  <td>{{persona.rol}}</td>
-                  <td>
-                     <!--<a class="" :href="'persona_update.html?id_persona=' + persona.id_persona" >Editar</a>-->
-                     <a class="" :href="'persona_update.html?id='+ persona.id_persona" >Editar</a>
-                     <button type="button" class="" v-on:click="eliminar(persona.id_persona)" >Eliminar</button>
-                  </td> 
-                </tr>
-              </tbody>
-              
-            </table>
 
+      <main class="contenido">
+        <div id="app" class="">
+          <a href="persona_nuevo.html" class="boton_crud">Nuevo</a>
+          <div v-if="error">
+            <p>Lo sentimos , ........</p>
           </div>
-          
-      </div>
-    </main>
+          <div v-else>
+            <section v-if="cargando">
+              <div class="spinner-border"></div>
+              <p>Cargando .....</p>
+            </section>
+            
+          <div>
+              <table class="container_crud">
+                <thead>
+                  <tr class="" >
+                    <th scope="col">id</th>
+                    <th scope="col">Foto</th>
+                    <th scope="col">nombre</th>
+                    <th scope="col">apellido</th>
+                    <th scope="col">mail</th>
+                    <th scope="col">fecha de nacimiento</th>
+                    <th scope="col">movil</th>
+                    <th scope="col">genero</th>
+                    <th scope="col">usuario</th>
+                    <th scope="col">clave</th>
+                    <th scope="col">rol</th>
+                    <th scope="col">Acciones</th>
+                  </tr>
+                </thead>
+            
+                <tbody>
+                  <tr class="" v-for="persona in personas">
+                    <td scope="row">{{persona.id_persona}}</td>
+                    <td>
+                      <img width="60" :src="persona.foto" :alt="persona.nombre">
+                    </td>
+                    <td>{{persona.nombre}}</td>
+                    <td>{{persona.apellido}}</td>
+                    <td>{{persona.mail}}</td>
+                    <td>{{persona.fechanac}}</td>
+                    <td>{{persona.movil}}</td>
+                    <td>{{persona.genero}}</td>
+                    <td>{{persona.usuario}}</td>
+                    <td>{{persona.clave}}</td>
+                    <td>{{persona.rol}}</td>
+                    <td>
+                      <!--<a class="" :href="'persona_update.html?id_persona=' + persona.id_persona" >Editar</a>-->
+                      <a class="boton_crud" :href="'persona_update.html?id='+ persona.id_persona" >Editar</a>
+                      <a class="boton_crud" v-on:click="eliminar(persona.id_persona)" >Eliminar</a>
+                    </td> 
+                  </tr>
+                </tbody>
+                
+              </table>
 
-    <footer>
+            </div>
+            
+        </div>
+      </main>
 
-    </footer>
+      <footer class="item footer">
 
+      </footer>
+    </section>
 
     
     <!--Link de VUE-->
@@ -83,5 +100,6 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./js/personasCRUD.js"></script>
     <script src="./js/persona_update.js "></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>

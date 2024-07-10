@@ -884,8 +884,8 @@ table{
     table-layout: fixed;
     border-collapse:collapse;
     background: rgb(0 0 0 / 41%);
-    margin-top:20px
-    
+    margin:20px; 
+
 }
 thead{
     background-color: #fa7592;

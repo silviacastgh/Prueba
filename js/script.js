@@ -29,7 +29,7 @@ if(document.querySelector("header")){
                 <li class="dropdown" id="usuario" style="display: none;">
                     <a class="dropbtn" href="#" class="dropdownId">USUARIO</a>
                     <div class="dropdown-content">
-                        <a href="./usuario_update.html">MODIFICAR</a>
+                        <a href="persona_update.html?id=+persona.id_persona">MODIFICAR</a>
                         <a href="#" id="cerrarSesion">CERRAR SESIÓN</a>
                     </div>
                 </li>

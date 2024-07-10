@@ -2,7 +2,7 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
-      url: "./json/pg.json", 
+      url: "https://scastillo.pythonanywhere.com/pet", 
       datos: [],
       datosAll: [],
 

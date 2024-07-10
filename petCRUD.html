@@ -1,26 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>PetCRUD</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="./css/estilos.css">
-    <link rel="shortcut icon" href="./img/favicon-32x32.png" type="image/x-icon"/>
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="./img/favicon-32x32.png" type="image/x-icon"> <!--favicon-->
+  <link rel="stylesheet" href="./css/estilos.css"> <!--hoja de estilos-->
+
+
+  <!--tipografia-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+ 
+
+  <title>CRUD Mascota</title>
 </head>
 <body>
-    <header id="item header">
-        <!-- place navbar here -->
-    </header>
-    <main>
-        <div id="app" class="container">
-            <sectionsection class="banner" id="adopcion">
-            <h1>Pet CRUD</h1>
-            </section>
-            <br>
-            <a  class="boton_crud" href="pet_nuevo.html">Nuevo</a>
-            <br><br>
-            <!--<div v-if="error">
+    <section class="container">
+      <!--header-->
+      <header class="item header">
+        <!-- en script.js -->
+      </header>
+
+
+      <!--main-->
+      <main class="contenido">
+        <div id="app" class="">
+
+
+            <a  class="boton_crud" href="pet_nuevo.html">Nueva mascota</a>
+
+            <div v-if="error">
                 <p>Lo sentimos , ........</p>
             </div>
             <div v-else>
@@ -28,9 +42,9 @@
                     <div class="spinner-border"></div>
                     <p>Cargando .....</p>
                 </section>
-                <section v-else>-->
+                <section v-else>
                     <section class="tabla">
-                      <div class="container_crud">
+                    <div class="container_crud">
                         <table class="">
                             <thead>
                                 <tr>
@@ -41,6 +55,8 @@
                                     <th scope="col">Genero</th>
                                     <th scope="col">Especie</th>
                                     <th scope="col">Castrado</th>
+                                    <th scope="col">Opciones</th>
+
                                 </tr>
                             </thead>
                             <tbody>
@@ -55,23 +71,27 @@
                                     <td>{{pet.especie}}</td>
                                     <td>{{pet.castrado}}</td>
                                     <td>
-                    			      <a class="btn btn-primary" :href="'pet_update.html?id='+ pet.id_pet" >Editar</a>
-                                      <button type="button" class="btn btn-danger" v-on:click="eliminar(pet.id_pet)" >Eliminar</button>
+                                    <a  class="boton_crud" :href="'pet_update.html?id='+ pet.id_pet" >Editar</a>
+                                    <a class="boton_crud" v-on:click="eliminar(pet.id_pet)" >Eliminar</a>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
-                     </div>
-                   </section>
+                    </div>
+                </section>
             </div>
         </div>
-    </main>
-    <footer>
-        <!-- place footer here -->
-    </footer>
+        
+      </main>
+
+      <!--footer-->
+      <footer class="item footer">
+        <!-- en script.js -->
+      </footer>
     
+    </section>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><!--Link de VUE-->
     <script src="./js/petCRUD.js"></script>
-    <script src="./js/script_sinfooter.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>

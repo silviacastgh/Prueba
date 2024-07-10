@@ -1,59 +1,58 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <title>Pet Nuevo</title>
+  <title>Nueva mascota</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="./css/estilos.css">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!--boxicon-->
+  <link rel="shortcut icon" href="./img/favicon-32x32.png" type="image/x-icon"> <!--favicon-->
+  <link rel="stylesheet" href="./css/estilos.css"> <!--hoja de estilos-->
 
-  
-  
-    <!--tipografia-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+  <!--tipografia-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 
 </head>
 <body>
-  <header id="header">
-    <!-- place navbar here -->
-  </header>
   <main class="inicio">
-    <section class="wrapper">
+    <section class="wrapper pet">
       <a href="./index.html"><img class="icono" src="./img/icono.png" alt=""></a> <!--enlace para volver al index-->
-     <div class="" id="app">
-       <form class="login" onsubmit=" return validar_ingreso()" >
-        <h1>Alta Pet</h1>
-        <div class="contacto_input">
-            <label for="foto">Foto</label>
-            <input type="text" name="foto" id="foto" v-model="foto">
-            <img width="100" :src="foto" alt="foto">
+      <div class="" id="app">
+        <form class="login">
+          <h1>Alta Pet</h1>
+          <div class="pet_input">
+              <label for="foto">Foto</label>
+              <input type="text" name="foto" id="foto" v-model="foto">
+              <img width="100"   :src="foto" alt="">
           </div>
-        <div class="contacto_input">
-          <label for="nombre">Nombre</label>
-          <input type="text" name="nombre" id="nombre" v-model="nombre">
-        </div>
-        <div class="contacto_input">
-          <label for="edad">Edad</label>
-          <input type="number" name="edad" id="edad" v-model="edad">
-        </div>
-        <div class="contacto_input">
-            <label for="genero">Genero</label>
-            <input type="text" name="genero" id="genero" v-model="genero">
+          <div class="pet_input">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" v-model="nombre">
           </div>
-          <div class="contacto_input">
-            <label for="especie">Especie</label>
-            <input type="text" name="especie" id="especie" v-model="especie">
+          <div class="pet_input">
+            <label for="edad">Edad</label>
+            <input type="number" name="edad" id="edad" v-model="edad">
           </div>
-          <div class="contacto_input">
-            <label for="castrado">Castrado</label>
-            <input type="text" name="castrado" id="castrado" v-model="castrado">
-          </div>
-        
-          <button type="button" class="boton" v-on:click="grabar()">Grabar</button>
-      </form>
+          <div class="pet_input">
+              <label for="genero">Género</label>
+              <input type="text" name="genero" id="genero" v-model="genero">
+            </div>
+            <div class="pet_input">
+              <label for="especie">Especie</label>
+              <input type="text" name="especie" id="especie" v-model="especie">
+            </div>
+            <div class="pet_input">
+              <label for="castrado">Castrado</label>
+              <input type="text" name="castrado" id="castrado" v-model="castrado">
+            </div>
+          
+            <button type="button" class="boton" v-on:click="grabar()">Grabar</button>
+        </form>
     </div>
   </section>
   </main>

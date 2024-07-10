@@ -799,6 +799,7 @@ div .a{
     .requisitos_item{
         margin: 70px;
     }
+    
 }
 
 
@@ -874,7 +875,7 @@ body .tabla{
 
 }
 .container_crud{
-    border:solid 1 px rgba(255,255,255,0.2);
+    border:solid 1 px rgba(255, 255, 255, 0.455);
     
 }
 table{
@@ -882,33 +883,80 @@ table{
     font-size: 14px;
     table-layout: fixed;
     border-collapse:collapse;
-    background:#706e6e;
+    background: rgb(0 0 0 / 41%);
+    margin-top:20px
+    
 }
 thead{
-    background-color: #f65577;
+    background-color: #fa7592;
 }
 th{
     padding:20px 15px;
     font-weight: 700;
     text-transform: uppercase;
+    font-size: 16px;
 }
 td{
     padding: 15px;
-    border-bottom: solid 1px  rgba(255,255,255,0.2);
+    border-bottom: solid 1px  rgba(255, 255, 255, 0.694);
+    text-transform: uppercase;
+    font-size: 14px;
 }
 tbody tr{
     cursor:pointer;
 }
 tbody tr:hover{
-    background: #fa7592;
+    background: #f9f2d6;
+    color: black;
 }
 .boton_crud{
-    width: 30%;
     color: #f9f2d6;
     background-color: #fa7592;
     margin: auto;
-    border-radius: 40px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    width: 10%;
+    margin-left: 20%
 }
 .boton_crud:hover{
     color:#20201e
 }
+
+.pet_input{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.pet_input input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    color: #f9f2d6;
+    padding: 20px 45px 20px;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.pet_input label{
+    padding-bottom: 10px;
+}
+
+.pet .icono{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: -5%;
+    left: 40%;
+}
+

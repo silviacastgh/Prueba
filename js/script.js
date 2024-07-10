@@ -23,10 +23,48 @@ if(document.querySelector("header")){
                 </li>
                 <li><a href="./donacion.html">DONACIÓN</a></li>
                 <li><a href="./contacto.html">CONTACTO</a></li>
-                <li><a href="./login.html">INGRESAR</a></li>
+
+                <li><a href="./login.html" id="ingresar">INGRESAR</a></li>
+
+                <li class="dropdown" id="usuario" style="display: none;">
+                    <a class="dropbtn" href="#" class="dropdownId">USUARIO</a>
+                    <div class="dropdown-content">
+                        <a href="./usuario_update.html">MODIFICAR</a>
+                        <a href="#" id="cerrarSesion">CERRAR SESIÓN</a>
+                    </div>
+                </li>
+
+                <li class="dropdown" id="crud" style="display: none;">
+                    <a class="dropbtn" href="#" class="dropdownId">ADMINISTRACIÓN</a>
+                    <div class="dropdown-content">
+                        <a href="./petCRUD.html">ANIMALES</a>
+                        <a href="#">USUARIOS</a>
+                        <a href="#">ADOPCIONES</a>
+                    </div>
+                </li>
+
             </ul>     
         </nav>
     `;
+
+    const rol = sessionStorage.getItem("rol");
+  
+    if(rol=="user" || rol=="admin"){
+        document.querySelector("#usuario").setAttribute('style', 'display:on');
+        document.querySelector("#ingresar").setAttribute('style', 'display:none');
+        if (rol=="user"){
+            document.querySelector("#crud").setAttribute('style', 'display:none');
+
+        }else if (rol=="admin"){
+            document.querySelector("#crud").setAttribute('style', 'display:on');
+        }
+    }
+    
+    document.querySelector("#cerrarSesion").addEventListener("click", () => {
+        sessionStorage.clear();
+        alert("Nos vemos la próxima!")
+        window.location.href = "./index.html";
+    });
 }
 
 //---------------------------------------------------------
